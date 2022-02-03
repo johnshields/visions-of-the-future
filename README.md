@@ -11,7 +11,7 @@ alt="GSA Logo" width="500" height="250"/>
 | **Project Title** | Visions Of The Future |
 | :------------- |:-------------|
 | **Course**              | MSc Serious Games and Virtual Reality |
-| **Module**              | Interactive Visualisation |
+| **Module**              | Serious Games Development |
 | **Institute**           | [The Glasgow School of Art (SimVis)](https://www.gsa.ac.uk/research/research-units/school-of-simulation-and-visualisation/) |
 | **Students**             | Ben, Rory & John |
 | **Module Lecturer**      | Brian Loranger |
