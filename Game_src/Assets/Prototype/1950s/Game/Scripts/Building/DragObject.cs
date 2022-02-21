@@ -15,12 +15,15 @@ public class DragObject : MonoBehaviour
     {
         var mousePoint = Input.mousePosition;
         mousePoint.z = _mZCoord;
-        
+
         return Camera.main!.ScreenToWorldPoint(mousePoint);
     }
 
     private void OnMouseDrag()
     {
         transform.position = GetMouseWorldPos() + _mOffset;
+
+        if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0))
+            Destroy(gameObject);
     }
 }
