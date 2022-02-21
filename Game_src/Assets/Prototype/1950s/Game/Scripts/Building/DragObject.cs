@@ -7,8 +7,9 @@ public class DragObject : MonoBehaviour
 
     private void OnMouseDown()
     {
-        _mZCoord = Camera.main!.WorldToScreenPoint(gameObject.transform.position).z;
-        _mOffset = gameObject.transform.position - GetMouseWorldPos();
+        var position = gameObject.transform.position;
+        _mZCoord = Camera.main!.WorldToScreenPoint(position).z;
+        _mOffset = position - GetMouseWorldPos();
     }
 
     private Vector3 GetMouseWorldPos()
@@ -23,7 +24,7 @@ public class DragObject : MonoBehaviour
     {
         transform.position = GetMouseWorldPos() + _mOffset;
 
-        if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0))
+        if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0)) 
             Destroy(gameObject);
     }
 }

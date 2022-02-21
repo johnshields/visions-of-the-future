@@ -7,19 +7,22 @@ public class BuildModeTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (!_entered)
+        if (other.gameObject.CompareTag("Player"))
         {
-            print("Build mode on.");
-            buildingObjects[0].SetActive(true);
-            buildingObjects[1].SetActive(true);
-            _entered = true;
-        }
-        else
-        {
-            print("Build mode off.");
-            buildingObjects[0].SetActive(false);
-            buildingObjects[1].SetActive(false);
-            _entered = false;
+            if (!_entered)
+            {
+                print("Build mode on.");
+                buildingObjects[0].SetActive(true);
+                buildingObjects[1].SetActive(true);
+                _entered = true;
+            }
+            else
+            {
+                print("Build mode off.");
+                buildingObjects[0].SetActive(false);
+                buildingObjects[1].SetActive(false);
+                _entered = false;
+            }
         }
     }
 }
