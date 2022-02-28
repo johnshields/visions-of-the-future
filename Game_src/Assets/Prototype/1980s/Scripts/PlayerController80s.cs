@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.SceneManagement;
 
 public class PlayerController80s : MonoBehaviour
 {
@@ -16,6 +18,9 @@ public class PlayerController80s : MonoBehaviour
     
     Vector3 velocity;
     bool isGrounded;
+
+    public TMP_Text sceneChangeText;
+    public bool fadeOut;
 
     // Update is called once per frame
     void Update()
@@ -39,4 +44,23 @@ public class PlayerController80s : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
     }
+
+    private void OnTriggerEnter(Collider collider)
+    {
+        Debug.Log("Collider Entered");
+        sceneChangeText.gameObject.SetActive(true);
+
+        if (Input.GetKeyDown("l"))
+        {
+            SceneManager.LoadScene("1980s_Interview");
+            fadeOut = true;
+        }
+    }
+
+    private void OnTriggerExit(Collider other)
+    {
+        Debug.Log("Collier Exit");
+        sceneChangeText.gameObject.SetActive(false);
+    }
+
 }
