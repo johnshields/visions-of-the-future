@@ -24,7 +24,11 @@ public class DragObject : MonoBehaviour
     {
         transform.position = GetMouseWorldPos() + _mOffset;
 
-        if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0)) 
+        if (Input.GetKey(KeyCode.Delete) && Input.GetMouseButton(0))
+        {
             Destroy(gameObject);
+            Builder.objectsInScene--;
+            print("Deleted Object - Object Count: " + Builder.objectsInScene);
+        }
     }
 }
