@@ -6,45 +6,46 @@ using UnityEngine;
 
 public class BuildManager : MonoBehaviour
 {
-    public static BuildManager instance;
+    
 
   void Awake ()
     {
         instance = this;
     }
 
-    private Node selectedNode;
+   
 
     public GameObject standardBuildingPrefab;
     public GameObject anotherBuildingPrefab;
+    public GameObject buildEffect;
 
     public NodeUI nodeUI;
 
-    private GameObject buildingToBuild;
+    private BuildingBlueprint buildingToBuild;
+    private Node selectedBuilding;
 
-    public GameObject GetBuildingToBuild ()
+    public static BuildManager instance;
+
+
+    public bool CanBuild { get { return buildingToBuild != null;}} // property that checks to see if buldingToBuild is null and returns the results. Null = can't build.
+    
+    public void SelectBuildingToBuild(BuildingBlueprint building)
     {
-        return buildingToBuild;
+        buildingToBuild = building;
+        selectedBuilding = null;
     }
 
-    public void SelectNode (Node node)
+    public void SelectBuilding (Node node)
     {
-        selectedNode = node;
-        buildingToBuild = null; // disables ability to build buildings
+        selectedBuilding = node;
+        buildingToBuild = null; // when a building is selected, this means the node cannot be selected as well
 
         nodeUI.SetTarget(node);
     }
 
-
-    public void SetBuildingToBuild (GameObject building) // public method that allows different buildings to be built
+    public void BuildBuildingOn(Node node)
     {
-        buildingToBuild = building; // builds whatever prefab has been passed in
-        selectedNode = null; // disables ability to select nodes
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+        GameObject building = (GameObject)Instantiate(buildingToBuild.prefab, node.GetBuildPosition(), Quaternion.identity);
+        node.building = building;
     }
 }

@@ -8,7 +8,7 @@ public class Node : MonoBehaviour
 // keeps track of what is built on each node and handles user inputs
 
 {
-
+    
     public Vector3 positionOffset;
 
     public Color hoverColor;
@@ -17,7 +17,7 @@ public class Node : MonoBehaviour
 
     private Color startColor;
 
-    private GameObject building;
+    public GameObject building;
 
     BuildManager buildManager;
 
@@ -32,17 +32,16 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) // Stops the building being built if it is beneath the UI
             return;
 
-        if (buildManager.GetBuildingToBuild() == null)
-            return;
-
         if (building != null) // if a building has already been built on the node
         {
-            buildManager.SelectNode(this);
+            buildManager.SelectBuilding(this);
             return;
         }
 
-        GameObject buildingToBuild = buildManager.GetBuildingToBuild(); // calls BuildManager and builds building
-        building = (GameObject)Instantiate(buildingToBuild, transform.position + positionOffset, transform.rotation); // builds building at the exact node position, with the offset
+         if (!buildManager.CanBuild)
+            return;
+
+        buildManager.BuildBuildingOn(this); // passes in the node selected
     }
 
 
@@ -51,7 +50,7 @@ public class Node : MonoBehaviour
         if (EventSystem.current.IsPointerOverGameObject()) // Stops the tile changing colour if it is beneath the UI
             return;
 
-        if (buildManager.GetBuildingToBuild() == null)
+        if (!buildManager.CanBuild)
             return;
             
         rend.material.color = hoverColor; // digs down to objects material and changes it to hoverColor when mouse is over collider
@@ -62,6 +61,8 @@ public class Node : MonoBehaviour
         rend.material.color = startColor; // changes the material of the node back to its original color
     }
 
+    
+
     // Start is called before the first frame update
     void Start()
     {
@@ -69,11 +70,5 @@ public class Node : MonoBehaviour
         startColor = rend.material.color; // stores the original color of each node
 
         buildManager = BuildManager.instance;
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

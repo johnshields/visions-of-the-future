@@ -4,11 +4,5 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes:
-  - enabled: 1
-    path: Assets/Prototype/Scenes/1980s_Test.unity
-    guid: 7363f594f3d306241aa422ad21c1e83b
-  - enabled: 1
-    path: Assets/Prototype/Scenes/1980s_Interview.unity
-    guid: 0f2aa5449ccc50d4b93312ee100ca0a5
+  m_Scenes: []
   m_configObjects: {}
