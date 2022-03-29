@@ -17,6 +17,11 @@ public class PlayerController80s : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    void Start()
+    {
+        Cursor.lockState = CursorLockMode.Locked;
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -26,10 +31,10 @@ public class PlayerController80s : MonoBehaviour
             velocity.y = -2.0f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        float z = Input.GetAxis("Horizontal");
+        float x = Input.GetAxis("Vertical");
 
-        Vector3 move = transform.right * x + transform.forward * z;
+        Vector3 move = transform.right * -x + transform.forward * z;
         controller.Move(move * speed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded) {

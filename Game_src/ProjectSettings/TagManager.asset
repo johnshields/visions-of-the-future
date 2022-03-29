@@ -6,6 +6,7 @@ TagManager:
   tags:
   - DialogueText
   - DialogueUI
+  - Player1980
   layers:
   - Default
   - TransparentFX

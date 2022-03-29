@@ -10,14 +10,15 @@ public class SceneTransition : MonoBehaviour
     public bool fadeOut = false;
 
     public Animator animator;
-
     private int levelToLoad;
 
     // Update is called once per frame
     void Update()
     {
-        if (fadeOut) {
-            if (Input.GetKey("l")) {
+        if (fadeOut)
+        {
+            if (Input.GetKey("l"))
+            {
                 Debug.Log("Scene transition called");
                 FadeToNextLevel();
             }
