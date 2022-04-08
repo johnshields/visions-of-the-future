@@ -1,0 +1,45 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: RainMaterial
+  m_Shader: {fileID: -6465566751694194690, guid: 94c5eeb16103b2a4b8801edffbcfcd5d, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_177a916991e046d79c3d7ba40d5e0de9: 0.2
+    - Vector1_19b1c29ecfb24c59b14c517d42872007: 0.42
+    - Vector1_5c174b1773324f19b52d03891a3165d9: 85
+    - Vector1_750dfbffd1e349eda6411cb1dad723b3: 80.2
+    - Vector1_9013253cab4a434880cde0a56135513a: 8.6
+    - Vector1_c63dcc6f1f3b44588f068c558b285370: 28.4
+    - Vector1_e542ac76eaba4cf78a5f697b19461d9d: 4.1
+    - Vector1_f5c98f57132e4edda770395ba9ad59d1: 50
+    m_Colors:
+    - Color_26963aaa2ed04b599f5574787b9da419: {r: 0.36965996, g: 0.5602531, b: 0.6698113, a: 0}
+  m_BuildTextureStacks: []

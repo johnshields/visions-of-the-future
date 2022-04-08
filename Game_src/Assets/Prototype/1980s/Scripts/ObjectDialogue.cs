@@ -8,8 +8,6 @@ public class ObjectDialogue : MonoBehaviour
     private const string Ct = "";
     public string dialogueFt;
 
-    private bool _complete;
-
     public Collider playerCollider;
 
     private void OnTriggerEnter(Collider playerCollider)
@@ -26,7 +24,10 @@ public class ObjectDialogue : MonoBehaviour
 
     private void OnTriggerExit(Collider playerCollider)
     {
-        dialogueUI.SetActive(false);
+        dialogueUI.SetActive(false);    
         StopCoroutine(DialogueAnimation.AnimateDialogue(Ct, dialogueFt, dialogueText));
     }
 }
+
+//OnMouseDown function instead, that also highlights the object and launches the dialogue animation
+//
