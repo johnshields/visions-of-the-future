@@ -310,7 +310,7 @@ GameObject:
   - component: {fileID: 162314477}
   - component: {fileID: 162314476}
   m_Layer: 6
-  m_Name: Buidling (14)
+  m_Name: Building (14)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -327,8 +327,8 @@ Transform:
   m_LocalPosition: {x: 78.6, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 17
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &162314476
 BoxCollider:
@@ -1227,7 +1227,7 @@ GameObject:
   - component: {fileID: 279404379}
   - component: {fileID: 279404378}
   m_Layer: 6
-  m_Name: Buidling (2)
+  m_Name: Building (2)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1244,8 +1244,8 @@ Transform:
   m_LocalPosition: {x: 34.9, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 5
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &279404378
 BoxCollider:
@@ -1455,7 +1455,7 @@ GameObject:
   - component: {fileID: 327532727}
   - component: {fileID: 327532726}
   m_Layer: 6
-  m_Name: Buidling (12)
+  m_Name: Building (11)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1472,8 +1472,8 @@ Transform:
   m_LocalPosition: {x: -42.9, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 14
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &327532726
 BoxCollider:
@@ -6969,7 +6969,7 @@ GameObject:
   - component: {fileID: 713736441}
   - component: {fileID: 713736440}
   m_Layer: 6
-  m_Name: Buidling (9)
+  m_Name: Building (8)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6986,8 +6986,8 @@ Transform:
   m_LocalPosition: {x: 25.3, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 11
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &713736440
 BoxCollider:
@@ -12011,7 +12011,7 @@ GameObject:
   - component: {fileID: 759481422}
   - component: {fileID: 759481421}
   m_Layer: 6
-  m_Name: Buidling (4)
+  m_Name: Building (4)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12028,8 +12028,8 @@ Transform:
   m_LocalPosition: {x: -7.9000015, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 7
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &759481421
 BoxCollider:
@@ -12204,7 +12204,7 @@ GameObject:
   - component: {fileID: 773783816}
   - component: {fileID: 773783815}
   m_Layer: 6
-  m_Name: Buidling (6)
+  m_Name: Building (6)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12221,8 +12221,8 @@ Transform:
   m_LocalPosition: {x: -57, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 9
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &773783815
 BoxCollider:
@@ -12433,7 +12433,7 @@ GameObject:
   - component: {fileID: 896841212}
   - component: {fileID: 896841211}
   m_Layer: 6
-  m_Name: Buidling (1)
+  m_Name: Building (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12450,8 +12450,8 @@ Transform:
   m_LocalPosition: {x: 56.3, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 4
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &896841211
 BoxCollider:
@@ -12610,6 +12610,51 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 918630190}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &922757462
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 922757463}
+  m_Layer: 0
+  m_Name: SkyScrapers
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &922757463
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 922757462}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 896841210}
+  - {fileID: 279404377}
+  - {fileID: 1328795611}
+  - {fileID: 759481420}
+  - {fileID: 1584930817}
+  - {fileID: 773783814}
+  - {fileID: 2025800763}
+  - {fileID: 713736439}
+  - {fileID: 1636175976}
+  - {fileID: 1709363873}
+  - {fileID: 327532725}
+  - {fileID: 1343218320}
+  - {fileID: 1022581707}
+  - {fileID: 162314475}
+  - {fileID: 1743128161}
+  m_Father: {fileID: 1482587691}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &960449683
 GameObject:
   m_ObjectHideFlags: 0
@@ -12892,7 +12937,7 @@ GameObject:
   - component: {fileID: 1022581709}
   - component: {fileID: 1022581708}
   m_Layer: 6
-  m_Name: Buidling (13)
+  m_Name: Building (13)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -12909,8 +12954,8 @@ Transform:
   m_LocalPosition: {x: -70, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 16
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1022581708
 BoxCollider:
@@ -13976,7 +14021,7 @@ GameObject:
   - component: {fileID: 1328795613}
   - component: {fileID: 1328795612}
   m_Layer: 6
-  m_Name: Buidling (3)
+  m_Name: Building (3)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13993,8 +14038,8 @@ Transform:
   m_LocalPosition: {x: 14.699999, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 6
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1328795612
 BoxCollider:
@@ -14167,7 +14212,7 @@ GameObject:
   - component: {fileID: 1343218322}
   - component: {fileID: 1343218321}
   m_Layer: 6
-  m_Name: Buidling (7)
+  m_Name: Building (12)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -14184,8 +14229,8 @@ Transform:
   m_LocalPosition: {x: -84.1, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 15
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1343218321
 BoxCollider:
@@ -14773,21 +14818,7 @@ Transform:
   - {fileID: 965773909}
   - {fileID: 1442213446}
   - {fileID: 1108749001}
-  - {fileID: 896841210}
-  - {fileID: 279404377}
-  - {fileID: 1328795611}
-  - {fileID: 759481420}
-  - {fileID: 1584930817}
-  - {fileID: 773783814}
-  - {fileID: 2025800763}
-  - {fileID: 713736439}
-  - {fileID: 1636175976}
-  - {fileID: 1709363873}
-  - {fileID: 327532725}
-  - {fileID: 1343218320}
-  - {fileID: 1022581707}
-  - {fileID: 162314475}
-  - {fileID: 1743128161}
+  - {fileID: 922757463}
   m_Father: {fileID: 1577449771}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -15086,7 +15117,7 @@ GameObject:
   - component: {fileID: 1584930819}
   - component: {fileID: 1584930818}
   m_Layer: 6
-  m_Name: Buidling (5)
+  m_Name: Building (5)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15103,8 +15134,8 @@ Transform:
   m_LocalPosition: {x: -30.7, y: 15, z: 44.4}
   m_LocalScale: {x: 10, y: 30, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 8
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1584930818
 BoxCollider:
@@ -15322,7 +15353,7 @@ GameObject:
   - component: {fileID: 1636175978}
   - component: {fileID: 1636175977}
   m_Layer: 6
-  m_Name: Buidling (10)
+  m_Name: Building (9)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15339,8 +15370,8 @@ Transform:
   m_LocalPosition: {x: 2.7, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 12
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1636175977
 BoxCollider:
@@ -15663,7 +15694,7 @@ GameObject:
   - component: {fileID: 1709363875}
   - component: {fileID: 1709363874}
   m_Layer: 6
-  m_Name: Buidling (11)
+  m_Name: Building (10)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15680,8 +15711,8 @@ Transform:
   m_LocalPosition: {x: -20.099998, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 13
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1709363874
 BoxCollider:
@@ -15853,7 +15884,7 @@ GameObject:
   - component: {fileID: 1743128163}
   - component: {fileID: 1743128162}
   m_Layer: 6
-  m_Name: Buidling (15)
+  m_Name: Building (15)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -15870,8 +15901,8 @@ Transform:
   m_LocalPosition: {x: 67.8, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 18
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &1743128162
 BoxCollider:
@@ -16671,7 +16702,7 @@ GameObject:
   - component: {fileID: 2025800765}
   - component: {fileID: 2025800764}
   m_Layer: 6
-  m_Name: Buidling (8)
+  m_Name: Building (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16688,8 +16719,8 @@ Transform:
   m_LocalPosition: {x: 45.500004, y: 10, z: 27}
   m_LocalScale: {x: 10, y: 20, z: 10}
   m_Children: []
-  m_Father: {fileID: 1482587691}
-  m_RootOrder: 10
+  m_Father: {fileID: 922757463}
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &2025800764
 BoxCollider:
