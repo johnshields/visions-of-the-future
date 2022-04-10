@@ -1,19 +1,11 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 
 public class TV_GuidePathfinding : MonoBehaviour
 {
     public GameObject targetGameObject;
-    public float speed;
-
     private Transform target;
-    private CharacterController controller;
-
-    Path path;
-    Seeker seeker;
-
+    private Seeker seeker;
     public bool pathPossible = true;
 
     private void Start()
@@ -28,26 +20,17 @@ public class TV_GuidePathfinding : MonoBehaviour
 
     private void CheckPath()
     {
-        GraphNode node1 = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
-        GraphNode node2 = AstarPath.active.GetNearest(target.position, NNConstraint.Default).node;
+        var node1 = AstarPath.active.GetNearest(transform.position, NNConstraint.Default).node;
+        var node2 = AstarPath.active.GetNearest(target.position, NNConstraint.Default).node;
 
         pathPossible = PathUtilities.IsPathPossible(node1, node2);
     }
 
-    void UpdatePath()
+    private void UpdatePath()
     {
         if (seeker.IsDone())
         {
-            seeker.StartPath(transform.position, target.position, OnPathComplete);
-        }
-    }
-
-    void OnPathComplete(Path p)
-    {
-        if (!p.error)
-        {
-            path = p;
-            //currentWaypoint = 0;
+            seeker.StartPath(transform.position, target.position, null);
         }
     }
 }

@@ -5,6 +5,7 @@ public class AnimationActivator : MonoBehaviour
     private Animator _animator;
     private int animationActive;
     public string parameter;
+    public GameObject player;
     
     private void Start()
     {
@@ -14,6 +15,9 @@ public class AnimationActivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _animator.SetTrigger(animationActive);
+        if (other == player.GetComponent<Collider>())
+        {
+            _animator.SetTrigger(animationActive);   
+        }
     }
 }
