@@ -1,5 +1,6 @@
 using UnityEngine;
 using Pathfinding;
+using UnityEditor.Build.Content;
 
 public class TV_GuidePathfinding : MonoBehaviour
 {

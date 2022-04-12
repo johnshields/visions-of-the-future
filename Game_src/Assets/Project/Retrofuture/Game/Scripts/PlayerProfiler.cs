@@ -17,7 +17,7 @@ namespace Project.Retrofuture.Game.Scripts
 
         private Animator _animator;
         private int _profile, _profileZ, _grounded;
-
+        
         private void Start()
         {
             _animator = GetComponent<Animator>();
@@ -25,7 +25,7 @@ namespace Project.Retrofuture.Game.Scripts
             _profileZ = Animator.StringToHash("profileZ");
             _grounded = Animator.StringToHash("grounded");
         }
-
+        
         private void Update()
         {
             Movement();
@@ -57,7 +57,7 @@ namespace Project.Retrofuture.Game.Scripts
             // Face camera when not moving.
             if (hInput == 0) model.rotation = Quaternion.LookRotation(Vector3.back);
         }
-
+ 
         private void JumpActive()
         {
             // Jump.

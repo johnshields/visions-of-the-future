@@ -17,6 +17,7 @@ public class AnimationActivator : MonoBehaviour
     {
         if (other == player.GetComponent<Collider>())
         {
+            print("Animation active..");
             _animator.SetTrigger(animationActive);   
         }
     }
