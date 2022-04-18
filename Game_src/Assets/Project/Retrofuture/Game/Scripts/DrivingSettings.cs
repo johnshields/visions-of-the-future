@@ -9,9 +9,12 @@ public class DrivingSettings : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        // Music.
         drivingMusic.Play();
+        // Cameras.
         dashCam.SetActive(true);
         mainCam.SetActive(false);
+        //Player & Guide.
         dummy.SetActive(true);
         player.SetActive(false);
         StartCoroutine(Respawn());
@@ -19,14 +22,17 @@ public class DrivingSettings : MonoBehaviour
 
     private IEnumerator Respawn()
     {
+        // Player & Guide.
         player.transform.position = new Vector3(92f, 0.50f, -20f);
         yield return new WaitForSeconds(1f);
         guide.transform.position = new Vector3(98f, 1.5f, -20f);
         guide.SetActive(false);
         dummyGuide.SetActive(true);
         yield return new WaitForSeconds(50f);
+        // Cameras.
         dashCam.SetActive(false);
         mainCam.SetActive(true);
+        // Player & guide.
         dummy.SetActive(false);
         dummyGuide.SetActive(false);
         player.SetActive(true);
