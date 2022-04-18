@@ -5,8 +5,7 @@ public class AnimationActivator : MonoBehaviour
     private Animator _animator;
     private int animationActive;
     public string parameter;
-    public GameObject player;
-    
+
     private void Start()
     {
         _animator = GetComponent<Animator>();
@@ -15,10 +14,7 @@ public class AnimationActivator : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other == player.GetComponent<Collider>())
-        {
-            print("Animation active..");
-            _animator.SetTrigger(animationActive);   
-        }
+        print("Animation active..");
+        _animator.SetTrigger(animationActive);
     }
 }
