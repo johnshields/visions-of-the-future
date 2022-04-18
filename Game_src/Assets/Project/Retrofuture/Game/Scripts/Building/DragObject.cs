@@ -1,9 +1,17 @@
+using System;
 using UnityEngine;
 
 public class DragObject : MonoBehaviour
 {
     private Vector3 _mOffset;
     private float _mZCoord;
+    private bool _toggleState;
+    private Renderer _renderer;
+
+    private void Start()
+    {
+        _renderer = GetComponent<Renderer>();
+    }
 
     private void OnMouseDown()
     {
@@ -25,5 +33,21 @@ public class DragObject : MonoBehaviour
         
         if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0))
             Destroy(gameObject);
+    }
+    
+    private void OnMouseOver()
+    {
+        ToggleState();
+        
+        if (_renderer) // check if the renderer is null
+        {
+            _renderer.material.color = _toggleState ? Color.white : Color.blue;
+        }
+        else Debug.LogWarning("Objects does not have a renderer");
+    }
+    
+    private void ToggleState()
+    {
+        _toggleState = !_toggleState;
     }
 }

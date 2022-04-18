@@ -4,6 +4,7 @@ public class Builder : MonoBehaviour
 {
     public GameObject[] buildingObject;
     private int _selectedObject;
+    public int objectPos;
     
     public void Selector(int num)
     {
@@ -35,9 +36,10 @@ public class Builder : MonoBehaviour
         if (Input.GetMouseButtonDown(1))
         {
             var mousePos = Input.mousePosition;
-            mousePos.z = -5;
+            mousePos.z = objectPos;
             var worldPos = Camera.main!.ScreenToWorldPoint(mousePos);
             Instantiate(buildingObject[_selectedObject], worldPos, Quaternion.identity);
+            print("object placed");
         }
     }
 }

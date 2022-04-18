@@ -25,7 +25,7 @@ public class DrivingSettings : MonoBehaviour
         // Player & Guide.
         player.transform.position = new Vector3(92f, 0.50f, -20f);
         yield return new WaitForSeconds(1f);
-        guide.transform.position = new Vector3(98f, 1.5f, -20f);
+        guide.transform.position = new Vector3(95f, 1.5f, -20f);
         guide.SetActive(false);
         dummyGuide.SetActive(true);
         yield return new WaitForSeconds(50f);
