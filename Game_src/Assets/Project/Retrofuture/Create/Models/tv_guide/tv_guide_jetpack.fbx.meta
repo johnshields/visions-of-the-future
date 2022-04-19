@@ -75,6 +75,7 @@ ModelImporter:
   referencedClips:
   - 1800976e1d2672d44b3ffdabc2cbf15a
   - f7b3677aab3e7b247bb2e5c1cdf4a780
+  - b2782a00798064e46beeedbff13ff715
   - aafe434be43f1fd4fb90de5cd46bc79f
   - 5535495892e0184479cd38cfcc902fe7
   - 9242ab62413a2ef4d9f0f5961e42361e
@@ -91,7 +92,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.03
+    globalScale: 3
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
