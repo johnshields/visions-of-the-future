@@ -26,10 +26,11 @@ namespace Building
         {
             transform.position = GetMouseWorldPos() + _mOffset;
 
-            if (Input.GetKey(KeyCode.Z) && Input.GetMouseButton(0))
+            if (Input.GetKey(KeyCode.R) && Input.GetMouseButton(0))
             {
                 Destroy(gameObject);
                 print("Object destroyed");
+                Builder.objectsPlaced--;
             }
         }
     }
