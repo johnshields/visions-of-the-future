@@ -17,7 +17,7 @@ public class DialogueAnimation : MonoBehaviour
                 //isRunning = true;
                 ct = ft.Substring(0, i);
                 dt.GetComponent<TMP_Text>().text = ct;
-                yield return new WaitForSeconds(0.05f);
+                yield return new WaitForSeconds(0.03f);
             }
             //isRunning = false;
         //}
