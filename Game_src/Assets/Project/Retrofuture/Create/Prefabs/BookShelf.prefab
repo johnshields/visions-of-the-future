@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 7229640336639901578}
   - component: {fileID: -8797410027227537582}
   - component: {fileID: -4137900634700950325}
+  - component: {fileID: -1681842374147698831}
   m_Layer: 0
   m_Name: BookShelf
   m_TagString: Untagged
@@ -117,3 +118,15 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.00045038736, y: 0.0006879252, z: 0.00072964997}
   m_Center: {x: 0.000000025334884, y: -0.0000012169183, z: 0.00036100534}
+--- !u!114 &-1681842374147698831
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9078606398139342071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: be93225d39e48244baf4942526b54fd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
