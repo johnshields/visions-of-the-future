@@ -6,7 +6,7 @@ public class MrCircuits : MonoBehaviour
     private int _waveActive, _idleActive;
     private Animator _animator;
 
-    //public GameObject dialogueUI, dialogueText;
+    public GameObject dialogueUI, dialogueText;
     private const string Ct = "";
     public string dialogueFt;
 
@@ -25,8 +25,8 @@ public class MrCircuits : MonoBehaviour
         if (!_complete)
         {
             // dialogue
-            //dialogueUI.SetActive(true);
-            //StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
+            dialogueUI.SetActive(true);
+            StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
             AudioSource.PlayClipAtPoint(voice, Camera.main!.transform.position);
             // animation
             _animator.SetTrigger(_waveActive);
@@ -40,6 +40,6 @@ public class MrCircuits : MonoBehaviour
         _complete = true;
         yield return new WaitForSeconds(4.5f);
         _animator.SetBool(_idleActive, true);
-        //dialogueUI.SetActive(false);
+        dialogueUI.SetActive(false);
     }
 }

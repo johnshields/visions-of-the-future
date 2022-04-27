@@ -1,5 +1,6 @@
 using Pathfinding;
 using UnityEngine;
+using Guide;
 
 namespace Building
 {
@@ -8,6 +9,7 @@ namespace Building
         public GameObject[] buildingObjects;
         private bool _entered;
         public GameObject guide;
+        public static bool build;
 
         private void OnTriggerEnter(Collider other)
         {
@@ -19,6 +21,7 @@ namespace Building
                     buildingObjects[0].SetActive(true);
                     buildingObjects[1].SetActive(true);
                     DisableGuide(false);
+                    build = true;
                     _entered = true;
                 }
                 else
@@ -27,6 +30,7 @@ namespace Building
                     buildingObjects[0].SetActive(false);
                     buildingObjects[1].SetActive(false);
                     DisableGuide(true);
+                    build = false;
                     _entered = false;
                 }
             }
