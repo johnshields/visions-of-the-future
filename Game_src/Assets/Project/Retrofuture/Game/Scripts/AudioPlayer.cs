@@ -7,5 +7,6 @@ public class AudioPlayer : MonoBehaviour
     {
         sourceClip[0].Play();
         sourceClip[1].Play();
+        sourceClip[2].Play();
     }
 }
