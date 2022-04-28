@@ -26,6 +26,9 @@ public class QuizManager : MonoBehaviour
     public GameObject ReplicantScreen;
     public GameObject HumanScreen;
 
+    public Animator DroneAnimator;
+    public Animator CanvasAnimator;
+
     void Start()
     {
         if (unansweredQuestions == null) {
@@ -50,12 +53,12 @@ public class QuizManager : MonoBehaviour
 
         if (currentQuestion.isTrue)
         {
-            trueAnswerText.text = "WRONG";
-            falseAnswerText.text = "CORRECT";
+            trueAnswerText.text = "Hmm...";
+            falseAnswerText.text = "Interesting...";
         }
         else {
-            trueAnswerText.text = "CORRECT";
-            falseAnswerText.text = "WRONG";
+            trueAnswerText.text = "Interesting...";
+            falseAnswerText.text = "Hmm...";
         }
     }
 
@@ -110,11 +113,13 @@ public class QuizManager : MonoBehaviour
         EndScreen.gameObject.SetActive(true);
         QuizPanel.gameObject.SetActive(false);
 
-        if (currentScore >= 3) {
+        if (currentScore >= 6) {
             HumanScreen.gameObject.SetActive(true);
         }
-        else if (currentScore <= 2) {
+        else if (currentScore <= 5) {
             ReplicantScreen.gameObject.SetActive(true);
+            DroneAnimator.SetTrigger("Replicant");
+            CanvasAnimator.SetTrigger("ReplicantFade");
         }
     }
 }

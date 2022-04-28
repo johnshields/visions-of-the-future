@@ -13,10 +13,14 @@ public class ObjectDialogue : MonoBehaviour
     public Collider playerCollider;
     public bool isRunning = false;
 
+    public AudioClip[] sounds;
+    public AudioSource source;
+
     private void OnTriggerEnter(Collider playerCollider)
     {
         if (playerCollider.gameObject.CompareTag("Player1980") && isRunning != true)
         {
+            DroneAudio();
             dialogueUI.SetActive(true);
             StartCoroutine(AnimateDialogue(Ct, dialogueFt, dialogueText));
         }
@@ -43,6 +47,15 @@ public class ObjectDialogue : MonoBehaviour
                 yield return new WaitForSeconds(0.05f);
             }
             isRunning = false;
+        }
+    }
+
+    private void DroneAudio()
+    {
+        if (!source.isPlaying)
+        {
+            source.clip = sounds[Random.Range(0, sounds.Length)];
+            source.PlayOneShot(source.clip);
         }
     }
 }

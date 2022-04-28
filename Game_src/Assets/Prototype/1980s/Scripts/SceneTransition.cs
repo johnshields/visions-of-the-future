@@ -8,6 +8,7 @@ public class SceneTransition : MonoBehaviour
 {
     public TMP_Text sceneChangeText;
     public bool fadeOut = false;
+    public bool replicantFade = false;
 
     public Animator animator;
     private int levelToLoad;
@@ -23,11 +24,22 @@ public class SceneTransition : MonoBehaviour
                 FadeToNextLevel();
             }
         }
+
+        if (replicantFade) {
+            Debug.Log("Replicant Scene Transition Called");
+            BackToNavigation();
+        }
     }
 
     public void FadeToNextLevel() 
     {
         FadeToLevel(SceneManager.GetActiveScene().buildIndex + 1);
+    }
+
+    public void BackToNavigation() 
+    {
+        animator.SetTrigger("ReplicantFade");
+        SceneManager.LoadScene(0);
     }
 
     public void FadeToLevel(int levelIndex) 

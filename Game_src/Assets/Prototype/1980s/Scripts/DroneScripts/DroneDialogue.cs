@@ -22,7 +22,7 @@ public class DroneDialogue : MonoBehaviour
 
     private IEnumerator CloseDialogue() 
     {
-        yield return new WaitForSeconds(3f);
+        yield return new WaitForSeconds(10f);
         dialogueUI.SetActive(false);
     }
 
