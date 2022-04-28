@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 namespace Building
@@ -8,6 +9,7 @@ namespace Building
         private int _selectedObject;
         public int objectPos;
         public static int objectsPlaced;
+        public AudioClip clip;
 
         public void Selector(int num)
         {
@@ -68,7 +70,14 @@ namespace Building
                 Instantiate(buildingObject[_selectedObject], worldPos, Quaternion.identity);
                 objectsPlaced++;
                 print("Objects in Scene: " + objectsPlaced);
+                StartCoroutine(PlayClip());
             }
+        }
+
+        private IEnumerator PlayClip()
+        {
+            yield return new WaitForSeconds(0.5f);
+            AudioSource.PlayClipAtPoint(clip, Camera.main!.transform.position, 0.1f);
         }
     }
 }

@@ -27,7 +27,7 @@ public class MrCircuits : MonoBehaviour
             // dialogue
             dialogueUI.SetActive(true);
             StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
-            AudioSource.PlayClipAtPoint(voice, Camera.main!.transform.position);
+            AudioSource.PlayClipAtPoint(voice, Camera.main!.transform.position, 0.2f);
             // animation
             _animator.SetTrigger(_waveActive);
             StartCoroutine(BackToIdle());
