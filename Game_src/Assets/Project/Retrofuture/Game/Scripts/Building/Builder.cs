@@ -9,7 +9,7 @@ namespace Building
         private int _selectedObject;
         public int objectPos;
         public static int objectsPlaced;
-        public AudioClip clip;
+        public AudioClip clip, tv, computer, bar;
 
         public void Selector(int num)
         {
@@ -17,43 +17,43 @@ namespace Building
             switch (num)
             {
                 case 0:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 0;
                     break;
                 case 1:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 1;
                     break;
                 case 2:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 2;
                     break;
                 case 3:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 3;
                     break;
                 case 4:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 4;
                     break;
                 case 5:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 5;
                     break;
                 case 6:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 6;
                     break;
                 case 7:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 7;
                     break;
                 case 8:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 8;
                     break;
                 case 9:
-                    print("selected: " + _selectedObject);
+                    print("selected: " + buildingObject[_selectedObject].tag);
                     _selectedObject = 9;
                     break;
             }
@@ -77,7 +77,21 @@ namespace Building
         private IEnumerator PlayClip()
         {
             yield return new WaitForSeconds(0.5f);
-            AudioSource.PlayClipAtPoint(clip, Camera.main!.transform.position, 0.1f);
+            switch (_selectedObject)
+            {
+                case 1:
+                    AudioSource.PlayClipAtPoint(tv, Camera.main!.transform.position, 0.1f);
+                    break;
+                case 4:
+                    AudioSource.PlayClipAtPoint(computer, Camera.main!.transform.position, 0.1f);
+                    break;
+                case 6:
+                    AudioSource.PlayClipAtPoint(bar, Camera.main!.transform.position, 0.1f);
+                    break;
+                default:
+                    AudioSource.PlayClipAtPoint(clip, Camera.main!.transform.position, 0.1f);
+                    break;
+            }
         }
     }
 }

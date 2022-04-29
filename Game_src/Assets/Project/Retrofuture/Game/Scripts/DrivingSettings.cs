@@ -5,12 +5,13 @@ public class DrivingSettings : MonoBehaviour
 {
     public GameObject guide, dummyGuide, player, dummy;
     public GameObject dashCam, mainCam;
-    public AudioSource drivingMusic;
+    public AudioSource drivingMusic, carSound;
 
     private void OnTriggerEnter(Collider other)
     {
-        // Music.
+        // Music and audio.
         drivingMusic.Play();
+        carSound.Play();
         // Cameras.
         dashCam.SetActive(true);
         mainCam.SetActive(false);
