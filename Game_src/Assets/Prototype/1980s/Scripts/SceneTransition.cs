@@ -30,6 +30,7 @@ public class SceneTransition : MonoBehaviour
             {
                 Debug.Log("Scene transition called");
                 FadeToNextLevel();
+                animator.SetTrigger("FadeOut");
             }
         }
 
@@ -71,7 +72,7 @@ public class SceneTransition : MonoBehaviour
     }
 
     //Gets called from canvas animation when fade transition is completed
-    public void OnFadeCompelte()
+    public void OnFadeComplete()
     {
         Debug.Log("OnFadeComplete Called");
         SceneManager.LoadScene(levelToLoad);
