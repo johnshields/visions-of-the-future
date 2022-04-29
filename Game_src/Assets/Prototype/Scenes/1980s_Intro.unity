@@ -308,7 +308,10 @@ MonoBehaviour:
   sceneChangeText: {fileID: 1256174131}
   fadeOut: 1
   replicantFade: 0
+  humanFade: 0
   animator: {fileID: 241817702}
+  source: {fileID: 0}
+  reticle: {fileID: 0}
 --- !u!114 &4604952
 MonoBehaviour:
   m_ObjectHideFlags: 0

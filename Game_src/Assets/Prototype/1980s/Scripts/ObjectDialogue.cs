@@ -18,6 +18,8 @@ public class ObjectDialogue : MonoBehaviour
 
     private void OnTriggerEnter(Collider playerCollider)
     {
+        //When user object enters collider and dialogue is not running, call necessary Functions/Coroutines and set UI elements to active
+        //Ignore if the object is not Player or dialogue animation is already running
         if (playerCollider.gameObject.CompareTag("Player1980") && isRunning != true)
         {
             DroneAudio();
@@ -31,12 +33,14 @@ public class ObjectDialogue : MonoBehaviour
 
     private void OnTriggerExit(Collider playerCollider)
     {
+        //When user leaves collider area hides the chosen UI element and stops coroutine
         dialogueUI.SetActive(false);    
         StopCoroutine(AnimateDialogue(Ct, dialogueFt, dialogueText));
     }
 
     public IEnumerator AnimateDialogue(string ct, string ft, GameObject dt)
     {
+        //Runs through given string and delays output for animated effect
         Debug.Log("Animation Started");
         if (isRunning == false) {
             isRunning = true;
@@ -52,6 +56,7 @@ public class ObjectDialogue : MonoBehaviour
 
     private void DroneAudio()
     {
+        //Takes random audio clip and plays if audio source is not already playing
         if (!source.isPlaying)
         {
             source.clip = sounds[Random.Range(0, sounds.Length)];

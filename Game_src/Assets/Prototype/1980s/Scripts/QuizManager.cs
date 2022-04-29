@@ -31,10 +31,12 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
+        //If Unanswered Questions list is null (not empty) fills list
         if (unansweredQuestions == null) {
             unansweredQuestions = questions.ToList<QuestionBluePrint>();
         }
         
+        //When unanswered Questions list becomes empty calls interview compelte function, else call set random question function
         if (unansweredQuestions.Count == 0) {
             InterviewComplete();
         }
@@ -46,11 +48,13 @@ public class QuizManager : MonoBehaviour
 
     void SetRandomQuestion() 
     {
+        //Generates random number between 0 and remaining unanswered questions and sets current question to the chosen place in the list
         int randomQuestionIndex = Random.Range(0, unansweredQuestions.Count);
         currentQuestion = unansweredQuestions[randomQuestionIndex];
 
         factText.text = currentQuestion.text;
 
+        //Changes text response under buttons based on user response
         if (currentQuestion.isTrue)
         {
             trueAnswerText.text = "Hmm...";
@@ -64,16 +68,17 @@ public class QuizManager : MonoBehaviour
 
     IEnumerator TransitionToNextQuestion() 
     {
+        //Removes Current question from the list
         unansweredQuestions.Remove(currentQuestion);
 
+        //Waits for question delay to end
         yield return new WaitForSeconds(questiondelay);
 
         Debug.Log("Score: " + currentScore);
-
-        //SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         Start();
     }
 
+    //When user selects trueButton run checks and update necessary variables based on question/answer and starts coroutine for next question
     public void UserSelectTrue() {
         animator.SetTrigger("True");
         
@@ -88,6 +93,7 @@ public class QuizManager : MonoBehaviour
         StartCoroutine(TransitionToNextQuestion());
     }
 
+    //When user selects falseButton run checks and update necessary variables based on question/answer and starts coroutine for next question
     public void UserSelectFalse()
     {
         animator.SetTrigger("False");
@@ -105,6 +111,7 @@ public class QuizManager : MonoBehaviour
         StartCoroutine(TransitionToNextQuestion());
     }
 
+    //When interview is completed show/hide UI elements and triggers scene ending depending on user results
     void InterviewComplete() 
     {
         Debug.Log("All Questions Answered");
@@ -114,11 +121,13 @@ public class QuizManager : MonoBehaviour
         QuizPanel.gameObject.SetActive(false);
 
         if (currentScore >= 6) {
+            //If user answered like a human, set Human animation for both the Drone Guide and Transition Canvas
             HumanScreen.gameObject.SetActive(true);
             DroneAnimator.SetTrigger("Human");
             CanvasAnimator.SetTrigger("HumanFade");
         }
         else if (currentScore <= 5) {
+            //If user answered like a replicant, set Replicant animation for both Drone Guide and Transition Canvas
             ReplicantScreen.gameObject.SetActive(true);
             DroneAnimator.SetTrigger("Replicant");
             CanvasAnimator.SetTrigger("ReplicantFade");

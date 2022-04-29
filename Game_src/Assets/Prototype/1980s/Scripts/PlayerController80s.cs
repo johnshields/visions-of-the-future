@@ -17,12 +17,13 @@ public class PlayerController80s : MonoBehaviour
     Vector3 velocity;
     bool isGrounded;
 
+    //Removes cursor from screen at start of the scene
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
+    //Simple player movement script that updates location with user input and simpe gravity transform
     void Update()
     {
         isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);

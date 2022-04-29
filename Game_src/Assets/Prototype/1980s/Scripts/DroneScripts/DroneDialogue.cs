@@ -12,23 +12,29 @@ public class DroneDialogue : MonoBehaviour
 
     private bool isRunning;
 
-    // Start is called before the first frame update
+    [SerializeField]
+    public float waitTime;
+
     void Start()
     {
+        //Shows dialogue UI and begins animated text coroutine
         dialogueUI.SetActive(true);
         StartCoroutine(AnimateDialogue(Ct, dialogueFt, dialogueText));
         StartCoroutine(CloseDialogue());
     }
 
+    //Called to close the Drone Dialogue after chosen amount of time.
     private IEnumerator CloseDialogue() 
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(waitTime);
         dialogueUI.SetActive(false);
     }
 
+    //Taken from Dialogue Animation Script
     public IEnumerator AnimateDialogue(string ct, string ft, GameObject dt)
     {
         Debug.Log("Animation Started");
+        //Only runs once previous dialogue is complete
         if (isRunning == false)
         {
             isRunning = true;

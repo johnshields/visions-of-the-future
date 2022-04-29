@@ -12,22 +12,26 @@ public class AudioRandomiser : MonoBehaviour
 
     private float waitTime;
 
-    // Start is called before the first frame update
     void Start()
     {
+        //Assigns source variable with chosen audio source
         source = GetComponent<AudioSource>();
     }
 
-    // Update is called once per frame
     void Update()
     {
+        //When source is not playing audio, function will wait the alloted wait time
         if (!source.isPlaying)
         {
             if (waitTime < 0f)
             {
+                //Selects random audio source and sets audio to randomised value to reduce repitition
                 source.clip = sounds[Random.Range(0, sounds.Length)];
                 source.volume = Random.Range(1 - volumeChangeMultiplier, 1);
+                //Plays audio clip all the way through without getting interrupted by other sources
                 source.PlayOneShot(source.clip);
+
+                //Wait time is randomised between 5 and 10 seconds, to stop audio from being too repetitive
                 waitTime = Random.Range(5, 10);
             }
             else {

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+//Blueprint for interrogation questions that takes in required fields
 [System.Serializable]
 public class QuestionBluePrint
 {

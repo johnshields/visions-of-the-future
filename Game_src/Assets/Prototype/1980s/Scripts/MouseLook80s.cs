@@ -15,30 +15,32 @@ public class MouseLook80s : MonoBehaviour
 
     private bool interactToggle;
 
-    // Start is called before the first frame update
     void Start()
     {
+        //Locks cursor to centre of the screen and hides
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        //Will likely implement this toggle in GameManager script,a s this will globally effect multiple scripts 
+        //When "P" key is pressed switch the interact toggle
         if (Input.GetKeyDown("p"))
         {
             interactToggle = !interactToggle;
         }
 
+        //When interactToggle is set to false, call mouse look function
         if (!interactToggle) {
             MouseLook();
         }
 
+        //When interactToggle is set to true, call mouse local interaction function
         if (interactToggle) {
             MouseLocalInteraction();
         }
     }
 
+    //Simple mouse look script that updates camera rotation with mouse movement
     void MouseLook() 
     {
         Cursor.lockState = CursorLockMode.Locked;
@@ -49,14 +51,11 @@ public class MouseLook80s : MonoBehaviour
         xRotation -= mouseY;
         xRotation = Mathf.Clamp(xRotation, -xClamp, xClamp);
 
-        //Vector3 targetRotation = transform.eulerAngles;
-        //targetRotation.x = xRotation;
-        //playerCamera.eulerAngles = targetRotation;
-
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
         playerCamera.Rotate(Vector3.up * mouseX);
     }
 
+    //Removes cursor lock state so user can interact with the in world canvas space
     void MouseLocalInteraction() 
     {
         Cursor.lockState = CursorLockMode.None;

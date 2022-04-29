@@ -27787,6 +27787,7 @@ MonoBehaviour:
   dialogueText: {fileID: 1201686048}
   dialogueFt: Ah good, you're finally awake. Let's begin. Please answer all questions
     with the answer that feels correct to you. Remember, there are no wrong answers...
+  waitTime: 10
 --- !u!4 &1728944977 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -4216859302048453862, guid: 5bf89420780d23644a820051c2d803cb, type: 3}
