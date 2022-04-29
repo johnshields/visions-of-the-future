@@ -28,7 +28,7 @@ public class AudioRandomiser : MonoBehaviour
                 source.clip = sounds[Random.Range(0, sounds.Length)];
                 source.volume = Random.Range(1 - volumeChangeMultiplier, 1);
                 source.PlayOneShot(source.clip);
-                waitTime = Random.Range(5, 12);
+                waitTime = Random.Range(5, 10);
             }
             else {
                 waitTime -= Time.deltaTime;

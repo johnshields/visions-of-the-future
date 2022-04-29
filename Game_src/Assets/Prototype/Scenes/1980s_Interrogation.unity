@@ -5583,6 +5583,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 7344449227954188193, guid: b5dbaf99ecfbbb6478f055883690bcfb, type: 3}
+      propertyPath: source
+      value: 
+      objectReference: {fileID: 2056949003}
+    - target: {fileID: 7344449227954188193, guid: b5dbaf99ecfbbb6478f055883690bcfb, type: 3}
+      propertyPath: reticle
+      value: 
+      objectReference: {fileID: 347642370}
     - target: {fileID: 7344449227954188206, guid: b5dbaf99ecfbbb6478f055883690bcfb, type: 3}
       propertyPath: m_Name
       value: SceneTransitionEmpty
@@ -18459,8 +18467,8 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 102
   DopplerLevel: 1
-  MinDistance: 1
-  MaxDistance: 50
+  MinDistance: 10
+  MaxDistance: 100
   Pan2D: 0
   rolloffMode: 0
   BypassEffects: 0
@@ -18495,7 +18503,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 1
+      value: 0.7
       inSlope: 0
       outSlope: 0
       tangentMode: 0
@@ -29047,7 +29055,7 @@ MonoBehaviour:
   - text: You're watching TV. Suddenly you realise there's a wasp crawling on your
       arm, do you kill it?
     answer: 0
-    isTrue: 0
+    isTrue: 1
     usUnanswered: 0
   - text: Do you think you'd enjoy a life of solitude?
     answer: 0
@@ -29874,6 +29882,107 @@ RectTransform:
   m_AnchoredPosition: {x: -1, y: 1.4729004}
   m_SizeDelta: {x: 0, y: 3.2862854}
   m_Pivot: {x: 0.5, y: 0.5}
+--- !u!1 &2056949002 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7344449227954188206, guid: b5dbaf99ecfbbb6478f055883690bcfb, type: 3}
+  m_PrefabInstance: {fileID: 130750027}
+  m_PrefabAsset: {fileID: 0}
+--- !u!82 &2056949003
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2056949002}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 80beac357fadd924b924de7f6fd727ef, type: 3}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &2081758485
 GameObject:
   m_ObjectHideFlags: 0

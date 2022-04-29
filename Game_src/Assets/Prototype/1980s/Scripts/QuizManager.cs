@@ -115,6 +115,8 @@ public class QuizManager : MonoBehaviour
 
         if (currentScore >= 6) {
             HumanScreen.gameObject.SetActive(true);
+            DroneAnimator.SetTrigger("Human");
+            CanvasAnimator.SetTrigger("HumanFade");
         }
         else if (currentScore <= 5) {
             ReplicantScreen.gameObject.SetActive(true);
