@@ -20,7 +20,7 @@ public class ObjectDialogue : MonoBehaviour
     {
         //When user object enters collider and dialogue is not running, call necessary Functions/Coroutines and set UI elements to active
         //Ignore if the object is not Player or dialogue animation is already running
-        if (playerCollider.gameObject.CompareTag("Player1980") && isRunning != true)
+        if (playerCollider.gameObject.CompareTag("Player") && isRunning != true)
         {
             DroneAudio();
             dialogueUI.SetActive(true);
