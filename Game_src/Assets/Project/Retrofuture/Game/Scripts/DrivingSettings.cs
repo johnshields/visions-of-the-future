@@ -6,9 +6,12 @@ public class DrivingSettings : MonoBehaviour
     public GameObject guide, dummyGuide, player, dummy;
     public GameObject dashCam, mainCam;
     public AudioSource drivingMusic, carSound;
+    public GameObject[] cinematicBorders;
 
     private void OnTriggerEnter(Collider other)
     {
+        // Cinema borders
+        CinemaMode(true, false);
         // Music and audio.
         drivingMusic.Play();
         carSound.Play();
@@ -30,6 +33,8 @@ public class DrivingSettings : MonoBehaviour
         guide.SetActive(false);
         dummyGuide.SetActive(true);
         yield return new WaitForSeconds(50f);
+        // Cinema Borders
+        CinemaMode(false, true);
         // Cameras.
         dashCam.SetActive(false);
         mainCam.SetActive(true);
@@ -38,5 +43,13 @@ public class DrivingSettings : MonoBehaviour
         dummyGuide.SetActive(false);
         player.SetActive(true);
         guide.SetActive(true);
+    }
+
+    private void CinemaMode(bool fadeIn, bool fadeOut)
+    {
+        cinematicBorders[0].GetComponent<Animator>().SetBool("FadeIn", fadeIn);
+        cinematicBorders[1].GetComponent<Animator>().SetBool("FadeIn", fadeIn);
+        cinematicBorders[0].GetComponent<Animator>().SetBool("FadeOut", fadeOut);
+        cinematicBorders[1].GetComponent<Animator>().SetBool("FadeOut", fadeOut);
     }
 }

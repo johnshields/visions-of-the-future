@@ -6,7 +6,7 @@ namespace Building
     {
         private Vector3 _mOffset;
         private float _mZCoord;
-    
+
         private void OnMouseDown()
         {
             _mZCoord = Camera.main!.WorldToScreenPoint(gameObject.transform.position).z;

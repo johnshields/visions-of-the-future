@@ -1,11 +1,14 @@
 using System.Collections;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace Building
 {
     public class Builder : MonoBehaviour
     {
         public GameObject[] buildingObject;
+        public GameObject objectCounter;
         private int _selectedObject;
         public int objectPos;
         public static int objectsPlaced;
@@ -69,9 +72,17 @@ namespace Building
                 var worldPos = Camera.main!.ScreenToWorldPoint(mousePos);
                 Instantiate(buildingObject[_selectedObject], worldPos, Quaternion.identity);
                 objectsPlaced++;
-                print("Objects in Scene: " + objectsPlaced);
                 StartCoroutine(PlayClip());
             }
+        }
+        
+        private void OnGUI()
+        {
+            var objectsUI = objectCounter.GetComponent<Text>();
+            if (objectsPlaced == 15)
+                objectsUI.text = "OBJECTS: MAX";
+            else
+                objectsUI.text = "OBJECTS: " + objectsPlaced;
         }
 
         private IEnumerator PlayClip()
