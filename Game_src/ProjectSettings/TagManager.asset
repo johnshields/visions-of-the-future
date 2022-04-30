@@ -19,6 +19,9 @@ TagManager:
   - Table
   - TV
   - Guide
+  - MiniGameUI
+  - ReturnUI
+  - Video
   layers:
   - Default
   - TransparentFX
