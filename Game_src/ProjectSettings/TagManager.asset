@@ -8,6 +8,17 @@ TagManager:
   - DialogueUI
   - Player1980
   - Drone
+  - Beds
+  - Chair
+  - Computer
+  - Desk
+  - FoodShelf
+  - Bar
+  - Power
+  - Sofa
+  - Table
+  - TV
+  - Guide
   layers:
   - Default
   - TransparentFX
