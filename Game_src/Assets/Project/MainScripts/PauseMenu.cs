@@ -52,6 +52,11 @@ public class PauseMenu : MonoBehaviour
         _paused = false;
     }
     
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
+    
     private void OnGUI()
     {
         var bannerText = levelBanner.GetComponent<Text>();
