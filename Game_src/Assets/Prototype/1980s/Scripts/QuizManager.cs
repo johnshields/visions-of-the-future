@@ -31,6 +31,8 @@ public class QuizManager : MonoBehaviour
 
     void Start()
     {
+        //currentScore = 0;
+
         //If Unanswered Questions list is null (not empty) fills list
         if (unansweredQuestions == null) {
             unansweredQuestions = questions.ToList<QuestionBluePrint>();
@@ -125,12 +127,14 @@ public class QuizManager : MonoBehaviour
             HumanScreen.gameObject.SetActive(true);
             DroneAnimator.SetTrigger("Human");
             CanvasAnimator.SetTrigger("HumanFade");
+            currentScore = 0;
         }
         else if (currentScore <= 5) {
             //If user answered like a replicant, set Replicant animation for both Drone Guide and Transition Canvas
             ReplicantScreen.gameObject.SetActive(true);
             DroneAnimator.SetTrigger("Replicant");
             CanvasAnimator.SetTrigger("ReplicantFade");
+            currentScore = 0;
         }
     }
 }
