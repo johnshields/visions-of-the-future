@@ -27,13 +27,6 @@ public class AcceptFate : MonoBehaviour
         Fader.CallFader(false, true);
         yield return new WaitForSeconds(2f);
         _gameOverUI.SetActive(true);
-        _videoPlayer.GetComponent<VideoPlayer>().Prepare();
-        while (_videoPlayer.GetComponent<VideoPlayer>().isPrepared)
-        {
-            yield return new WaitForSeconds(0.1f);
-            break;
-        }
-        print("video play");
         _videoPlayer.GetComponent<VideoPlayer>().Play();
         yield return new WaitForSeconds(8f);
         Fader.CallFader(false, true);

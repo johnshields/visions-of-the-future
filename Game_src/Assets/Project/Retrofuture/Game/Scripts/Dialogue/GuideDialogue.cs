@@ -36,6 +36,14 @@ namespace Guide
             StartCoroutine(CloseDialogue());
         }
 
+        public void WelcomeHome()
+        {
+            dialogueFt = "Ah good to be home!";
+            dialogueUI.SetActive(true);
+            StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
+            StartCoroutine(CloseDialogue());
+        }
+
         private IEnumerator CloseDialogue()
         {
             yield return new WaitForSeconds(3.5f);

@@ -1,9 +1,10 @@
 using System.Collections;
+using Guide;
 using UnityEngine;
 
 public class DrivingSettings : MonoBehaviour
 {
-    public GameObject guide, dummyGuide, player, dummy;
+    public GameObject guide, dummyGuide, player, dummy, gd;
     public GameObject dashCam, mainCam;
     public AudioSource drivingMusic, carSound;
     public GameObject[] cinematicBorders;
@@ -43,6 +44,14 @@ public class DrivingSettings : MonoBehaviour
         dummyGuide.SetActive(false);
         player.SetActive(true);
         guide.SetActive(true);
+        StartCoroutine(Dialogue());
+    }
+
+    private IEnumerator Dialogue()
+    {
+        yield return new WaitForSeconds(2f);
+        // Dialogue
+        gd.GetComponent<GuideDialogue>().WelcomeHome();
     }
 
     private void CinemaMode(bool fadeIn, bool fadeOut)
