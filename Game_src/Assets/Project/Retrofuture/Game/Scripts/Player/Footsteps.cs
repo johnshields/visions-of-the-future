@@ -20,12 +20,6 @@ public class Footsteps : MonoBehaviour
         WhatMat();
     }
 
-    private void Step()
-    {
-        var clip = RandoClip();
-        _audioSource.PlayOneShot(clip);
-    }
-
     private void WhatMat()
     {
         _matName = mat switch
@@ -35,6 +29,12 @@ public class Footsteps : MonoBehaviour
             2 => "metal",
             _ => _matName
         };
+    }
+
+    private void Step()
+    {
+        var clip = RandoClip();
+        _audioSource.PlayOneShot(clip);
     }
 
     private AudioClip RandoClip()
