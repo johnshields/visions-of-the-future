@@ -18,6 +18,7 @@ public class MrCircuits : MonoBehaviour
         _animator = GetComponent<Animator>();
         _idleActive = Animator.StringToHash("IdleActive");
         _waveActive = Animator.StringToHash("WaveActive");
+        dialogueUI.SetActive(false);
     }
 
     private void OnTriggerEnter(Collider other)
