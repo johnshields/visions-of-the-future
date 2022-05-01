@@ -11,7 +11,7 @@ namespace Guide
         private const string Ct = "";
         private bool _alreadySaid;
 
-        private void Start()
+        private void Awake()
         {
             dialogueFt = "What a day!";
             dialogueUI.SetActive(true);

@@ -1,10 +1,13 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class PauseMenu : MonoBehaviour
 {
     private static bool _paused;
     public GameObject menu;
+    public GameObject levelBanner;
+    public string currentLevel;
 
     private void Start()
     {
@@ -38,10 +41,22 @@ public class PauseMenu : MonoBehaviour
         menu.SetActive(false);
         //Cursor.lockState = CursorLockMode.Locked;
     }
+    
+    public void NavHub()
+    {
+        SceneManager.LoadScene("NavigationHub");
+        _paused = false;
+    }
 
     public void MainMenu()
     {
         SceneManager.LoadScene("01_MainMenu");
         _paused = false;
+    }
+    
+    private void OnGUI()
+    {
+        var bannerText = levelBanner.GetComponent<Text>();
+        bannerText.text = currentLevel;
     }
 }
