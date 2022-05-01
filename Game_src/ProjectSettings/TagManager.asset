@@ -22,6 +22,9 @@ TagManager:
   - MiniGameUI
   - ReturnUI
   - Video
+  - Wood
+  - Metal
+  - Concrete
   layers:
   - Default
   - TransparentFX
