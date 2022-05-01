@@ -5,9 +5,11 @@ using UnityEngine.SceneManagement;
 public class MainMenu : MonoBehaviour
 {
     private int _input;
+    public GameObject menuMusic;
 
     public void Awake()
     {
+        FadeMusic(true, false);
         Time.timeScale = 1f;
         AudioListener.volume = 1f;
     }
@@ -15,6 +17,7 @@ public class MainMenu : MonoBehaviour
     public void StartGame()
     {
         _input = 0;
+        FadeMusic(false, true);
         Fader.CallFader(false, true);
         StartCoroutine(DoNext(2f));
     }
@@ -22,8 +25,15 @@ public class MainMenu : MonoBehaviour
     public void ExitGame()
     {
         _input = 1;
+        FadeMusic(false, true);
         Fader.CallFader(false, true);
         StartCoroutine(DoNext(2f));
+    }
+
+    private void FadeMusic(bool fadeIn, bool fadeOut)
+    {
+        menuMusic.GetComponent<Animator>().SetBool("FadeIn", fadeIn);
+        menuMusic.GetComponent<Animator>().SetBool("FadeOut", fadeOut);
     }
 
     private IEnumerator DoNext(float time)
