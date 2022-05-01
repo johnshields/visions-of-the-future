@@ -1298,7 +1298,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0
-  m_Text: VISIONS of the FUTURE
+  m_Text: visions OF the future
 --- !u!224 &8242619227744916977
 RectTransform:
   m_ObjectHideFlags: 0

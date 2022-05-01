@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
@@ -8,6 +9,7 @@ public class PauseMenu : MonoBehaviour
     public GameObject menu;
     public GameObject levelBanner;
     public string currentLevel;
+    private int _input;
 
     private void Start()
     {
@@ -29,7 +31,6 @@ public class PauseMenu : MonoBehaviour
         AudioListener.volume = 0f;
         _paused = true;
         menu.SetActive(true);
-        //Cursor.lockState = CursorLockMode.None;
     }
 
     public void ResumeGame()
@@ -39,24 +40,61 @@ public class PauseMenu : MonoBehaviour
         AudioListener.volume = 1f;
         _paused = false;
         menu.SetActive(false);
-        //Cursor.lockState = CursorLockMode.Locked;
     }
     
     public void NavHub()
     {
-        SceneManager.LoadScene("NavigationHub");
+        Time.timeScale = 1f;
+        _input = 0;
         _paused = false;
+        menu.SetActive(false);
+        Fader.CallFader(false, true);
+        StartCoroutine(DoNext(2f));
     }
 
     public void MainMenu()
     {
-        SceneManager.LoadScene("01_MainMenu");
+        Time.timeScale = 1f;
+        _input = 1;
         _paused = false;
+        menu.SetActive(false);
+        Fader.CallFader(false, true);
+        StartCoroutine(DoNext(2f));
     }
     
     public void ExitGame()
     {
-        Application.Quit();
+        Time.timeScale = 1f;
+        _input = 2;
+        _paused = false;
+        menu.SetActive(false);
+        Fader.CallFader(false, true);
+        StartCoroutine(DoNext(2f));
+    }
+    
+    private IEnumerator DoNext(float time)
+    {
+        print(_input);
+        yield return new WaitForSeconds(time);
+        if (_input == 0)
+        {
+            SceneManager.LoadScene("NavigationHub");
+        }
+        
+        else if (_input == 1)
+        {
+            SceneManager.LoadScene("01_MainMenu");
+        }
+        else if (_input == 2)
+        {
+#if UNITY_EDITOR
+            UnityEditor.EditorApplication.isPlaying = false;
+#else
+           Application.Quit();
+#endif
+        }
+        else
+            print("no can do...");
     }
     
     private void OnGUI()
