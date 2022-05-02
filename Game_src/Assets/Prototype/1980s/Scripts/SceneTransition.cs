@@ -54,14 +54,14 @@ public class SceneTransition : MonoBehaviour
     public void BackToIntro()
     {
         animator.SetTrigger("HumanFade");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     //Sets ReplicantFade value for canvas and restarts to navigation hub
     public void BackToNavigation()
     {
         animator.SetTrigger("ReplicantFade");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 
     //Sets the level to load and removes the sceneChange text UI element
