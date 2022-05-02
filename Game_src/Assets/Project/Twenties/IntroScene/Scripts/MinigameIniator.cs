@@ -4,15 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class MinigameIniator : MonoBehaviour
-{   
-
-    GuideAudio guideAudio;
-
-    public void Start()
-    {
-        guideAudio = GuideAudio.instance;
-
-    }
+{ 
 
     public GameObject miniGameUI;
     public GameObject returnUI;
@@ -34,8 +26,7 @@ public class MinigameIniator : MonoBehaviour
     {
         if (other.CompareTag("TextUI") && counter < 1)
         {
-            textUI.SetActive(true);
-            guideAudio.PlayTextSpeech();
+            textUI.SetActive(true);            
             StartCoroutine(DestroyTextUI());
             counter ++;
         }
@@ -50,7 +41,6 @@ public class MinigameIniator : MonoBehaviour
             else
             {
                 miniGameUI.SetActive(true);
-                guideAudio.PlayMiniGameSpeech();
                 nextLevel = true;
             }
             
@@ -66,7 +56,6 @@ public class MinigameIniator : MonoBehaviour
             else
             {
                 returnUI.SetActive(true);                
-                guideAudio.PlayReturnMenuSpeech();
                 previousLevel = true;
             }
         }         
@@ -77,11 +66,13 @@ public class MinigameIniator : MonoBehaviour
         if (other.CompareTag("MiniGameUI"))
         {
             miniGameUI.SetActive(false);
+            nextLevel = false;
         }
 
         else if (other.CompareTag("ReturnUI"))
         {
             returnUI.SetActive(false);
+            previousLevel = false;
         }
     }
 
@@ -100,7 +91,7 @@ public class MinigameIniator : MonoBehaviour
             if (Input.GetKey(KeyCode.G))
             {
                 nextLevel = false;
-                SceneManager.LoadScene("1920s_TestBox", LoadSceneMode.Single);
+                SceneManager.LoadScene("04_TwentiesCityBuilder", LoadSceneMode.Single);
             }
         }
     }
@@ -112,7 +103,7 @@ public class MinigameIniator : MonoBehaviour
             if (Input.GetKey(KeyCode.G))
             {
                 previousLevel = false;
-                Debug.Log("Moved to previous Level");
+                SceneManager.LoadScene("02_NavHub", LoadSceneMode.Single);
             }
         }
     }

@@ -26,4 +26,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Prototype/Scenes/1980s_Interrogation.unity
     guid: ebeff9e314c228544beabf760c4632de
+  - enabled: 1
+    path: Assets/Project/Scenes/04_TwentiesCityBuilder.unity
+    guid: db5c6f962705f8a48b5ec02b9d5f8b14
   m_configObjects: {}
