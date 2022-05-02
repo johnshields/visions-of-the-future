@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class LevelIniator : MonoBehaviour
 {
@@ -23,7 +24,6 @@ public class LevelIniator : MonoBehaviour
     {
         if (other.CompareTag("1920sCollider"))
         {
-            Debug.Log("collision");
             twentiesPopUp.SetActive(true);
             startTwentiesLevel = true;
         }
@@ -46,16 +46,19 @@ public class LevelIniator : MonoBehaviour
         if (other.CompareTag("1920sCollider"))
         {
             twentiesPopUp.SetActive(false);
+            startTwentiesLevel = false;
         }
 
         else if (other.CompareTag("1950sCollider"))
         {
             fiftiesPopUp.SetActive(false);
+            startFiftiesLevel = false;
         }
 
         else if (other.CompareTag("1980sCollider"))
         {
             eightiesPopUp.SetActive(false);
+            startEightiesLevel = false;
         }
     }
 
@@ -66,7 +69,7 @@ public class LevelIniator : MonoBehaviour
             if (Input.GetKey(KeyCode.G))
             {
                 startTwentiesLevel = false;
-                Debug.Log("1920s");
+                SceneManager.LoadScene("03_TwentiesOpeningScene", LoadSceneMode.Single);
             }
         }
     }

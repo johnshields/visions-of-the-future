@@ -25,6 +25,14 @@ TagManager:
   - Wood
   - Metal
   - Concrete
+  - ResidentialZone
+  - CultureZone
+  - TextUI
+  - 1950sCollider
+  - 1920sCollider
+  - 1980sCollider
+  - TransportBuilding
+  - SteppedHouse
   layers:
   - Default
   - TransparentFX

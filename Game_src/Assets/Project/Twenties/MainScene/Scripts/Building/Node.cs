@@ -10,7 +10,7 @@ public class Node : MonoBehaviour
 {
     BuildManager buildManager;
     ScoreManager scoreManager;
-    AudioManager audioManager;
+    CityAudioManager cityAudioManager;
     CityIntensityAudioManager intensityAudioManager;    
     
 
@@ -41,7 +41,7 @@ public class Node : MonoBehaviour
     {
         buildManager = BuildManager.instance;
         scoreManager = ScoreManager.instance;
-        audioManager = AudioManager.instance;
+        cityAudioManager = CityAudioManager.instance;
         intensityAudioManager = CityIntensityAudioManager.instance;
         
 
@@ -94,7 +94,7 @@ public class Node : MonoBehaviour
 
         StartCoroutine(AddScoreChecker()); // calls the AddScoreChecker method
 
-        audioManager.BuildSoundPlay();
+        cityAudioManager.BuildSoundPlay();
         intensityAudioManager.CityIntensityIncreaser();
           
     }
@@ -122,7 +122,7 @@ public class Node : MonoBehaviour
 
         DecreaseScoreChecker(); // calls the DecreaseScoreChecker method
 
-        audioManager.DestroySoundPlay();
+        cityAudioManager.DestroySoundPlay();
         intensityAudioManager.CityIntensityDecreaser();
 
         yield return new WaitForSecondsRealtime(5f);

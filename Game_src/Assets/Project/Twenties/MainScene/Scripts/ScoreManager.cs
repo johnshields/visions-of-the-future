@@ -8,6 +8,7 @@ public class ScoreManager : MonoBehaviour
 {  
     public GameObject gameWonUI;
     public GameObject shopUI;
+    public GameObject _nodeUI;
 
     public static ScoreManager instance;
 
@@ -49,6 +50,7 @@ public class ScoreManager : MonoBehaviour
         {
             gameWonUI.SetActive(true);
             shopUI.SetActive(false);
+            _nodeUI.SetActive(false);
         }       
     }
 }

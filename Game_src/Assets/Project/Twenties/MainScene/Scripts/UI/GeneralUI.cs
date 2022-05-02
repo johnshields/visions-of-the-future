@@ -25,13 +25,12 @@ public class GeneralUI : MonoBehaviour
 
     public void LoadIntroScene()
     {
-        SceneManager.LoadScene("1920s_IntroScene", LoadSceneMode.Single);
-        Debug.Log("Intro scene has been loaded");
+        SceneManager.LoadScene("03_TwentiesOpeningScene", LoadSceneMode.Single);
     }
 
     public void LoadNavHub()
     {
-        Debug.Log("NavHub scene has been loaded");
+        SceneManager.LoadScene("02_NavHub", LoadSceneMode.Single);
     }
 
     public void HideTransportHint()

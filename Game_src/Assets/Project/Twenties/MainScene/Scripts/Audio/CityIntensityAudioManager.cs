@@ -28,7 +28,6 @@ public class CityIntensityAudioManager : MonoBehaviour
 
     private AudioSource layer1;
     private AudioSource layer2;
-
     private AudioSource layer3;
 
 
