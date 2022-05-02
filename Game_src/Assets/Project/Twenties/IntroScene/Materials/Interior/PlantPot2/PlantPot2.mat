@@ -1,0 +1,46 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: PlantPot2
+  m_Shader: {fileID: -6465566751694194690, guid: ad5d62fbcdf94b54e879f0eb8bddf6f7, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _SampleTexture2D_0a1fccf5998542da9fe38fc5f3b8bbd1_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 99385f6a4df33ce44819617b04de663d, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SampleTexture2D_adb77b62ae9b490aa7cdb82d7642c82e_Texture_1:
+        m_Texture: {fileID: 2800000, guid: 41cf5aa3a910a4a4a9f0e07672ad0724, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - Vector1_dd98815714e94465bffb7c285261d1b2: 0.92
+    m_Colors:
+    - Color_d1a6fc995db74f2e8e878b8b59f889cf: {r: 0.7735849, g: 0.5728907, b: 0.59073013, a: 0}
+  m_BuildTextureStacks: []
