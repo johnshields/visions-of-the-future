@@ -80,9 +80,9 @@ namespace Building
         {
             var objectsUI = objectCounter.GetComponent<Text>();
             if (objectsPlaced == 15)
-                objectsUI.text = "OBJECTS: MAX";
+                objectsUI.text = "MAX";
             else
-                objectsUI.text = "OBJECTS: " + objectsPlaced;
+                objectsUI.text = objectsPlaced.ToString();;
         }
 
         private IEnumerator PlayClip()
