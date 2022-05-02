@@ -7,15 +7,14 @@ namespace Main
     public class MainMenu : MonoBehaviour
     {
         private int _input;
-        public GameObject menuMusic;
-        public GameObject uiClicks;
+        public GameObject menuMusic, uiClicks, tagline;
 
         public void Awake()
         {
             FadeMusic(true, false);
             Time.timeScale = 1f;
             AudioManager.MuteActive();
-
+            StartCoroutine(Tagline());
         }
 
         public void StartGame()
@@ -49,6 +48,12 @@ namespace Main
         {
             menuMusic.GetComponent<Animator>().SetBool("FadeIn", fadeIn);
             menuMusic.GetComponent<Animator>().SetBool("FadeOut", fadeOut);
+        }
+
+        private IEnumerator Tagline()
+        {
+            yield return new WaitForSeconds(1f);
+            tagline.GetComponent<AudioSource>().Play();
         }
 
         private IEnumerator DoNext(float time)
