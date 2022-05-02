@@ -9,8 +9,7 @@ public class FootstepAudio : MonoBehaviour
     public AudioSource source;
 
     public float volume;
-
-    // Start is called before the first frame update
+    
     void Start()
     {
         source = GetComponent<AudioSource>();

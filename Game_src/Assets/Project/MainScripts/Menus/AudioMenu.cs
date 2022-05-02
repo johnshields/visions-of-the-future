@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * AudioMenu
+ * Script to control in MainMenu - Audio Options (buttons).
+ */
 public class AudioMenu : MonoBehaviour
 {
     public static bool mute;

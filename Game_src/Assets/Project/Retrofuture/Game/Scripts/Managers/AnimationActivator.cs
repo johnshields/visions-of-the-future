@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * AnimationActivator
+ * Script to Play animations on interactive objects in 1950's level.
+ */
 public class AnimationActivator : MonoBehaviour
 {
     private Animator _animator;

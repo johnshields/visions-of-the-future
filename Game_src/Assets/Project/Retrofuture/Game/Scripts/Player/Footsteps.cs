@@ -1,6 +1,11 @@
 using UnityEngine;
 using Random = UnityEngine.Random;
 
+/*
+ * Footsteps
+ * Script ot play sound for player's footsteps.
+ * Adapted from; https://youtu.be/Bnm8mzxnwP8
+ */
 public class Footsteps : MonoBehaviour
 {
     public AudioClip[] woodSteps;
@@ -20,6 +25,7 @@ public class Footsteps : MonoBehaviour
         WhatMat();
     }
 
+    // Switch material player is walking on.
     private void WhatMat()
     {
         _matName = mat switch
@@ -31,12 +37,14 @@ public class Footsteps : MonoBehaviour
         };
     }
 
+    // Accessed in Animation Events.
     private void FootSteps()
     {
         var clip = RandoClip();
         _audioSource.PlayOneShot(clip);
     }
 
+    // Play random click according to the right material.
     private AudioClip RandoClip()
     {
         return _matName switch

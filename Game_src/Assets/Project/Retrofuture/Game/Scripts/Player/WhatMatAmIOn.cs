@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * WhatMatAmIOn
+ * Script to tell what Material the player is walking on - (used by Footsteps). 
+ */
 public class WhatMatAmIOn : MonoBehaviour
 {
     public GameObject playerSteps;

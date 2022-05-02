@@ -3,6 +3,10 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
+/*
+ * PauseMenu
+ * Script for controlling the interaction (Buttons) of the PauseMenu.
+ */
 namespace Main
 {
     public class PauseMenu : MonoBehaviour
@@ -36,8 +40,9 @@ namespace Main
 
         public void ResumeGame()
         {
-            // Resume - volume & time.
+            // To change input sound.
             uiClicks.GetComponent<UIClicks>().input = 2;
+            // Resume - volume & time.
             Time.timeScale = 1f;
             AudioManager.MuteActive();
             _paused = false;
@@ -51,6 +56,7 @@ namespace Main
             _input = 0;
             _paused = false;
             menu.SetActive(false);
+            // Fade the scene and call do next to load NavHub.
             Fader.CallFader(false, true);
             StartCoroutine(DoNext(2f));
         }
@@ -62,6 +68,7 @@ namespace Main
             _input = 1;
             _paused = false;
             menu.SetActive(false);
+            // Fade the scene and call do next to load MainMenu.
             Fader.CallFader(false, true);
             StartCoroutine(DoNext(2f));
         }
@@ -82,6 +89,7 @@ namespace Main
             StartCoroutine(DoNext(2f));
         }
 
+        // For loading the NavHub, MainMenu and Exiting the game.
         private IEnumerator DoNext(float time)
         {
             yield return new WaitForSeconds(time);
@@ -101,12 +109,13 @@ namespace Main
                 print("Unable to do...");
         }
 
+        // Update the text on UI to current level set in Inspector.
         private void OnGUI()
         {
             var bannerText = levelBanner.GetComponent<Text>();
             bannerText.text = currentLevel;
         }
-
+        
         private void ResetTimeAndAudio()
         {
             Time.timeScale = 1f;

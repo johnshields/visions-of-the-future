@@ -2,6 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * MainMenu
+ * Script for controlling the interaction (Buttons) of the MainMenu.
+ */
 namespace Main
 {
     public class MainMenu : MonoBehaviour
@@ -9,18 +13,26 @@ namespace Main
         private int _input;
         public GameObject menuMusic, uiClicks, tagline;
 
-        public void Awake()
+        private void Awake()
         {
             FadeMusic(true, false);
             Time.timeScale = 1f;
             AudioManager.MuteActive();
-            StartCoroutine(Tagline());
+            
+            // Only play tagline on initial startup.
+            if (!TaglineBool.alreadyPlayed)
+            { 
+                StartCoroutine(Tagline());
+                TaglineBool.alreadyPlayed = true;
+            }
         }
 
         public void StartGame()
         {
+            // To change input sound.
             uiClicks.GetComponent<UIClicks>().input = 1;
             _input = 0;
+            // Fade Music, Scene and call Do Next to load NavHub.
             FadeMusic(false, true);
             Fader.CallFader(false, true);
             StartCoroutine(DoNext(2f));
@@ -36,6 +48,7 @@ namespace Main
             uiClicks.GetComponent<UIClicks>().input = 3;
         }
 
+        // Fade Audio and Scene, Then call DoNext to Exit the game.
         public void ExitGame()
         {
             _input = 1;
@@ -44,18 +57,21 @@ namespace Main
             StartCoroutine(DoNext(2f));
         }
 
+        // Access the Menu music animator and fade it depending on the parameters.
         private void FadeMusic(bool fadeIn, bool fadeOut)
         {
             menuMusic.GetComponent<Animator>().SetBool("FadeIn", fadeIn);
             menuMusic.GetComponent<Animator>().SetBool("FadeOut", fadeOut);
         }
 
+        // Play tagline after 1 second.
         private IEnumerator Tagline()
         {
             yield return new WaitForSeconds(1f);
             tagline.GetComponent<AudioSource>().Play();
         }
 
+        // For loading the NavHub and Exiting the game.
         private IEnumerator DoNext(float time)
         {
             yield return new WaitForSeconds(time);

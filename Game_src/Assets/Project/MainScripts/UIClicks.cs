@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * UIClicks
+ * Script to switch sounds based on UI button input by other scripts.
+ */
 public class UIClicks : MonoBehaviour
 {
     public AudioClip[] clickSound;

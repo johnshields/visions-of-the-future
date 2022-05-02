@@ -2,6 +2,10 @@
 using Building;
 using UnityEngine;
 
+/*
+ * GuideDialogue
+ * Script for controlling the Guide's Dialogue in the 1950's level.
+ */
 namespace Guide
 {
     public class GuideDialogue : MonoBehaviour
@@ -13,7 +17,9 @@ namespace Guide
 
         private void Awake()
         {
+            // Greet player on Awake.
             dialogueFt = "What a day!";
+            // Activate Dialogue and Typer.
             dialogueUI.SetActive(true);
             StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
             StartCoroutine(CloseDialogue());

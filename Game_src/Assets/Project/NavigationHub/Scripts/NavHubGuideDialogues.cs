@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/*
+ * NavHubGuideDialogues
+ * Script for controlling all 3 Guide Dialogue in NavHub.
+ */
 public class NavHubGuideDialogues : MonoBehaviour
 {
     public GameObject[] dialogueUI, dialogueText, guides;
@@ -15,6 +19,7 @@ public class NavHubGuideDialogues : MonoBehaviour
         _audioSource = GetComponent<AudioSource>();
     }
 
+    // For playing Audio and activate the Guide's Dialogue UI.
     public void Talk(string p, int gm)
     {
         _audioSource.PlayOneShot(voiceClips[gm]);
@@ -22,12 +27,14 @@ public class NavHubGuideDialogues : MonoBehaviour
         dialogueUI[gm].SetActive(true);
     }
 
+    // For changing phrase depending on the Guide.
     private void PhraseChanger(string phrase, int guideNum)
     {
         dialogueFt = phrase;
         StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText[guideNum]));
     }
 
+    // IEnumerator to play on Awake to make the Guides greet the player one after another.
     private IEnumerator TalkNext()
     {
         yield return new WaitForSeconds(2.5f);

@@ -1,10 +1,12 @@
-using System;
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.Video;
 
+/*
+ * AcceptFate
+ * Script to End 1950's Level.
+ */
 public class AcceptFate : MonoBehaviour
 {
     private static GameObject _videoPlayer;
@@ -22,6 +24,7 @@ public class AcceptFate : MonoBehaviour
         StartCoroutine(LoadScene());
     }
 
+    // IEnumerator to play ending video and Fade to NavHub. 
     private static IEnumerator LoadScene()
     {
         Fader.CallFader(false, true);
@@ -31,6 +34,6 @@ public class AcceptFate : MonoBehaviour
         yield return new WaitForSeconds(8f);
         Fader.CallFader(false, true);
         yield return new WaitForSeconds(2f);
-        SceneManager.LoadScene("NavigationHub");
+        SceneManager.LoadScene("02_NavHub");
     }
 }

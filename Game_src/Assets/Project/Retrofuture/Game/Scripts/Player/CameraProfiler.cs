@@ -1,6 +1,10 @@
 using UnityEngine;
 
-namespace Project.Retrofuture.Game.Scripts
+/*
+ * CameraProfiler
+ * Script for getting Camera to follow the player.
+ */
+namespace Player
 {
     public class CameraProfiler : MonoBehaviour
     {
@@ -14,6 +18,7 @@ namespace Project.Retrofuture.Game.Scripts
             _offset = transform.position - _target.position;
         }
 
+        // Update camera's desiredPosition of the target.
         private void LateUpdate()
         {
             var desiredPosition = _target.position + _offset;

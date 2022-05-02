@@ -2,6 +2,10 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+/*
+ * LevelInitiator
+ * Script for controlling the players interactions with Portals and Guides. 
+ */
 public class LevelInitiator : MonoBehaviour
 {
     public GameObject guideDialogue;
@@ -26,6 +30,8 @@ public class LevelInitiator : MonoBehaviour
         ActivePortal(other, false, false);
     }
 
+    // For switching Portals depending on the collider the player has interacted with.
+    // Also switches input for the Guide's dialogue.
     private void ActivePortal(Component other, bool level, bool dActive)
     {
         if (other.CompareTag($"1920sCollider"))
@@ -54,11 +60,13 @@ public class LevelInitiator : MonoBehaviour
         }
     }
 
+    // For Loading levels based on collider and key input.
     private void StartSelectedLevel()
     {
         if (startTwentiesLevel && Input.GetKey(KeyCode.G))
         {
             startTwentiesLevel = false;
+            // Fade out Audio, Scene and call LoadLevel.
             Fader.CallFader(false, true);
             NavHubAudio.FadeMusic(false, true);
             StartCoroutine(LoadLevel("03_TwentiesOpeningScene"));
@@ -79,6 +87,7 @@ public class LevelInitiator : MonoBehaviour
         }
     }
 
+    // IEnumerator with string param to change scene in StartSelectedLevel.
     private IEnumerator LoadLevel(string levelName)
     {
         yield return new WaitForSeconds(2f);
