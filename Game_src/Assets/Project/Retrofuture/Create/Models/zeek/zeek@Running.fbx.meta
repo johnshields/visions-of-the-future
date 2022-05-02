@@ -59,15 +59,15 @@ ModelImporter:
       bodyMask: 01000000010000000100000001000000010000000100000001000000010000000100000001000000010000000100000001000000
       curves: []
       events:
-      - time: 0.2834662
-        functionName: Step
+      - time: 0.33930498
+        functionName: FootSteps
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0
         intParameter: 0
         messageOptions: 0
-      - time: 0.83366203
-        functionName: Step
+      - time: 0.77214396
+        functionName: FootSteps
         data: 
         objectReferenceParameter: {instanceID: 0}
         floatParameter: 0

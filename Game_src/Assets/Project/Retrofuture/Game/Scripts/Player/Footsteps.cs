@@ -31,7 +31,7 @@ public class Footsteps : MonoBehaviour
         };
     }
 
-    private void Step()
+    private void FootSteps()
     {
         var clip = RandoClip();
         _audioSource.PlayOneShot(clip);
