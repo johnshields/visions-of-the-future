@@ -1,22 +1,13 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class LevelInitiator : MonoBehaviour
 {
-    public GameObject twentiesPopUp;
-    public GameObject fiftiesPopUp;
-    public GameObject eightiesPopUp;
-
-    private bool startTwentiesLevel;
-    private bool startFiftiesLevel;
-    private bool startEightiesLevel;
+    public GameObject twentiesPopUp, fiftiesPopUp, eightiesPopUp;
+    private bool startTwentiesLevel, startFiftiesLevel, startEightiesLevel;
 
     public void Update()
     {
-        StartTwentiesLevel();
-        StartFiftiesLevel();
-        StartEightiesLevel();
+        StartSelectedLevel();
     }
 
     public void OnTriggerEnter(Collider other)
@@ -27,13 +18,11 @@ public class LevelInitiator : MonoBehaviour
             twentiesPopUp.SetActive(true);
             startTwentiesLevel = true;
         }
-
         else if (other.CompareTag($"1950sCollider"))
         {
             fiftiesPopUp.SetActive(true);
             startFiftiesLevel = true;
         }
-
         else if (other.CompareTag($"1980sCollider"))
         {
             eightiesPopUp.SetActive(true);
@@ -44,55 +33,35 @@ public class LevelInitiator : MonoBehaviour
     public void OnTriggerExit(Collider other)
     {
         if (other.CompareTag($"1920sCollider"))
-        {
             twentiesPopUp.SetActive(false);
-        }
-
         else if (other.CompareTag($"1950sCollider"))
-        {
             fiftiesPopUp.SetActive(false);
-        }
-
         else if (other.CompareTag($"1980sCollider"))
-        {
             eightiesPopUp.SetActive(false);
-        }
     }
 
-    private void StartTwentiesLevel()
+    private void StartSelectedLevel()
     {
-        if (startTwentiesLevel)
+        if (startTwentiesLevel && Input.GetKey(KeyCode.G))
         {
-            if (Input.GetKey(KeyCode.G))
-            {
-                startTwentiesLevel = false;
-                Debug.Log("1920s");
-            }
+            startTwentiesLevel = false;
+            NavHubAudio.FadeMusic(false, true);
+            Fader.CallFader(false, true);
+            Debug.Log("1920s");
+        }
+        else if (startFiftiesLevel && Input.GetKey(KeyCode.G))
+        {
+            startFiftiesLevel = false;
+            NavHubAudio.FadeMusic(false, true);
+            Fader.CallFader(false, true);
+            Debug.Log("1950s");
+        }
+        else if (startEightiesLevel && Input.GetKey(KeyCode.G))
+        {
+            startEightiesLevel = false;
+            NavHubAudio.FadeMusic(false, true);
+            Fader.CallFader(false, true);
+            Debug.Log("1980s");
         }
     }
-
-    private void StartFiftiesLevel()
-    {
-        if (startFiftiesLevel)
-        {
-            if (Input.GetKey(KeyCode.G))
-            {
-                startFiftiesLevel = false;
-                Debug.Log("1950s");
-            }
-        }
-    }
-
-    private void StartEightiesLevel()
-    {
-        if (startEightiesLevel)
-        {
-            if (Input.GetKey(KeyCode.G))
-            {
-                startEightiesLevel = false;
-                Debug.Log("1980s");
-            }
-        }
-    }
-
 }

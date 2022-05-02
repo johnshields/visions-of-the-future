@@ -55,9 +55,9 @@ public class AudioSlider : MonoBehaviour
         }
     }
 
-    public void toggleSlider()
+    public void ToggleSlider()
     {
-        if (sliderObject.active)
+        if (sliderObject.activeInHierarchy)
         {
             sliderObject.SetActive(false);
         }

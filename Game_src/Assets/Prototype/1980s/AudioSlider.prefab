@@ -510,7 +510,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2851911065264060676}
         m_TargetAssemblyTypeName: AudioSlider, Assembly-CSharp
-        m_MethodName: toggleSlider
+        m_MethodName: ToggleSlider
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
