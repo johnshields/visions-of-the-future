@@ -2078,7 +2078,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Apartment
+  m_text: Apartment Block
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -2348,7 +2348,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Culture
+  m_text: 'Culture District
 
 '
   m_isRightToLeft: 0
@@ -2838,7 +2838,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 628302516}
         m_TargetAssemblyTypeName: GeneralUI, Assembly-CSharp
-        m_MethodName: HideResidentialHint
+        m_MethodName: HideSteppedHint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -3758,9 +3758,7 @@ MonoBehaviour:
   cultureZoneHintUI: {fileID: 1956703849}
   residentialZoneHintUI: {fileID: 621781326}
   openingUI: {fileID: 1201122370}
-  transportHintCounter: 0
-  cultureHintCounter: 0
-  residentialHintCounter: 0
+  steppedZoneHintUI: {fileID: 350416026}
 --- !u!114 &628302517
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5237,7 +5235,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Garden
+  m_text: 'Garden District
 
 '
   m_isRightToLeft: 0
@@ -6142,7 +6140,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Stepped
+  m_text: 'Stepped Housing
 
 '
   m_isRightToLeft: 0
@@ -7584,7 +7582,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Commercial
+  m_text: 'Commercial District
 
 '
   m_isRightToLeft: 0
@@ -9637,7 +9635,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: 'Transport
+  m_text: 'Transport Hub
 
 '
   m_isRightToLeft: 0

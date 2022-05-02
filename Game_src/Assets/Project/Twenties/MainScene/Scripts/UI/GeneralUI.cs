@@ -13,10 +13,7 @@ public class GeneralUI : MonoBehaviour
     public GameObject cultureZoneHintUI;
     public GameObject residentialZoneHintUI;
     public GameObject openingUI;
-
-    public int transportHintCounter;
-    public int cultureHintCounter;
-    public int residentialHintCounter;
+    public GameObject steppedZoneHintUI;
 
     public void Start()
     {
@@ -42,6 +39,12 @@ public class GeneralUI : MonoBehaviour
     public void HideCultureHint()
     {
         cultureZoneHintUI.SetActive(false);
+        shopUI.SetActive(true);
+    }
+
+    public void HideSteppedHint()
+    {
+        steppedZoneHintUI.SetActive(false);
         shopUI.SetActive(true);
     }
 
