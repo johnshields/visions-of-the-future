@@ -1,12 +1,13 @@
 using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class LevelInitiator : MonoBehaviour
 {
-    public GameObject twentiesPopUp, fiftiesPopUp, eightiesPopUp;
-    private bool startTwentiesLevel, startFiftiesLevel, startEightiesLevel;
+    public GameObject guideDialogue;
+    public GameObject[] guideDialogueUI;
+    public string[] guidePhrase;
+    private bool startTwentiesLevel, startFiftiesLevel, startEightiesLevel, _alreadyTalked;
 
     public void Update()
     {
@@ -15,30 +16,41 @@ public class LevelInitiator : MonoBehaviour
 
     public void OnTriggerEnter(Collider other)
     {
+        _alreadyTalked = false;
         ActivePortal(other, true, true);
     }
 
     public void OnTriggerExit(Collider other)
     {
+        _alreadyTalked = true;
         ActivePortal(other, false, false);
     }
 
-    private void ActivePortal(Component other, bool popup, bool level)
+    private void ActivePortal(Component other, bool level, bool dActive)
     {
         if (other.CompareTag($"1920sCollider"))
         {
-            twentiesPopUp.SetActive(popup);
+            if (!_alreadyTalked)
+                guideDialogue.GetComponent<NavHubGuideDialogues>().Talk(guidePhrase[0], 0);
+            
             startTwentiesLevel = level;
+            guideDialogueUI[0].SetActive(dActive);
         }
         else if (other.CompareTag($"1950sCollider"))
         {
-            fiftiesPopUp.SetActive(popup);
+            if (!_alreadyTalked)
+                guideDialogue.GetComponent<NavHubGuideDialogues>().Talk(guidePhrase[1], 1);
+            
             startFiftiesLevel = level;
+            guideDialogueUI[1].SetActive(dActive);
         }
         else if (other.CompareTag($"1980sCollider"))
         {
-            eightiesPopUp.SetActive(popup);
+            if (!_alreadyTalked)
+                guideDialogue.GetComponent<NavHubGuideDialogues>().Talk(guidePhrase[2], 2);
+            
             startEightiesLevel = level;
+            guideDialogueUI[2].SetActive(dActive);
         }
     }
 

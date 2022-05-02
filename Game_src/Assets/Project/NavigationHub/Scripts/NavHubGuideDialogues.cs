@@ -8,15 +8,14 @@ public class NavHubGuideDialogues : MonoBehaviour
     private AudioSource _audioSource;
     public string dialogueFt;
     private const string Ct = "";
-    //private bool _alreadySaid;
 
     private void Awake()
     {
         StartCoroutine(TalkNext());
         _audioSource = GetComponent<AudioSource>();
     }
-    
-    private void Talk(string p, int gm)
+
+    public void Talk(string p, int gm)
     {
         _audioSource.PlayOneShot(voiceClips[gm]);
         PhraseChanger(p, gm);
