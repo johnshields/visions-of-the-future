@@ -9,7 +9,7 @@ public class AudioMenu : MonoBehaviour
         mute = true;
         AudioListener.volume = 0f;
     }
-    
+
     public void UnMute()
     {
         mute = false;

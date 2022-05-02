@@ -12,11 +12,8 @@ public class MainMenu : MonoBehaviour
     {
         FadeMusic(true, false);
         Time.timeScale = 1f;
-        if (AudioMenu.mute)
-            AudioListener.volume = 0f;
-        else if (!AudioMenu.mute)
-            AudioListener.volume = 1f;
-            
+        AudioManager.MuteActive();
+
     }
 
     public void StartGame()

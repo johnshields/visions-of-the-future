@@ -37,7 +37,7 @@ public class PauseMenu : MonoBehaviour
         // Resume - volume & time.
         uiClicks.GetComponent<UIClicks>().input = 2;
         Time.timeScale = 1f;
-        AudioListener.volume = 1f;
+        AudioManager.MuteActive();
         _paused = false;
         menu.SetActive(false);
     }
@@ -84,13 +84,9 @@ public class PauseMenu : MonoBehaviour
     {
         yield return new WaitForSeconds(time);
         if (_input == 0)
-        {
             SceneManager.LoadScene("NavigationHub");
-        }
         else if (_input == 1)
-        {
             SceneManager.LoadScene("01_MainMenu");
-        }
         else if (_input == 2)
         {
 #if UNITY_EDITOR
@@ -100,9 +96,7 @@ public class PauseMenu : MonoBehaviour
 #endif
         }
         else
-        {
             print("Unable to do...");
-        }
     }
 
     private void OnGUI()
@@ -111,9 +105,9 @@ public class PauseMenu : MonoBehaviour
         bannerText.text = currentLevel;
     }
 
-    public void ResetTimeAndAudio()
+    private void ResetTimeAndAudio()
     {
         Time.timeScale = 1f;
-        AudioListener.volume = 1f;
+        AudioManager.MuteActive();
     }
 }
