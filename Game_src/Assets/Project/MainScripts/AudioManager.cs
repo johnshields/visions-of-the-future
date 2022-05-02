@@ -1,14 +1,17 @@
 using UnityEngine;
 
-public class AudioManager : MonoBehaviour
+namespace Main
 {
-    public static void MuteActive()
+    public class AudioManager : MonoBehaviour
     {
-        if (AudioMenu.mute)
-            AudioListener.volume = 0f;
-        else if (!AudioMenu.mute)
-            AudioListener.volume = 1f;
-        else
-            Debug.LogWarning("No audio in scene.");
+        public static void MuteActive()
+        {
+            if (AudioMenu.mute)
+                AudioListener.volume = 0f;
+            else if (!AudioMenu.mute)
+                AudioListener.volume = 1f;
+            else
+                Debug.LogWarning("No audio in scene.");
+        }
     }
 }
