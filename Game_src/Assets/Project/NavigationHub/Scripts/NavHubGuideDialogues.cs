@@ -15,7 +15,11 @@ public class NavHubGuideDialogues : MonoBehaviour
 
     private void Awake()
     {
-        StartCoroutine(TalkNext());
+        if (!StartBooleans.alreadyGreeted)
+        {
+            StartCoroutine(TalkNext());
+            StartBooleans.alreadyGreeted = true;
+        }
         _audioSource = GetComponent<AudioSource>();
     }
 

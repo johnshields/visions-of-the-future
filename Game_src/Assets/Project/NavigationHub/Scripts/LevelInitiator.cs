@@ -83,7 +83,7 @@ public class LevelInitiator : MonoBehaviour
             startEightiesLevel = false;
             Fader.CallFader(false, true);
             NavHubAudio.FadeMusic(false, true);
-            StartCoroutine(LoadLevel("1980_Intro")); // TODO - Update to main project.
+            StartCoroutine(LoadLevel("1980s_Intro")); // TODO - Update to main project.
         }
     }
 

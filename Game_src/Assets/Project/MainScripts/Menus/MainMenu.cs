@@ -20,10 +20,10 @@ namespace Main
             AudioManager.MuteActive();
             
             // Only play tagline on initial startup.
-            if (!TaglineBool.alreadyPlayed)
+            if (!StartBooleans.alreadyPlayed)
             { 
                 StartCoroutine(Tagline());
-                TaglineBool.alreadyPlayed = true;
+                StartBooleans.alreadyPlayed = true;
             }
         }
 
