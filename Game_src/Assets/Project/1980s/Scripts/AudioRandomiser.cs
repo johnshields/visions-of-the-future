@@ -32,7 +32,7 @@ public class AudioRandomiser : MonoBehaviour
                 source.PlayOneShot(source.clip);
 
                 //Wait time is randomised between 5 and 10 seconds, to stop audio from being too repetitive
-                waitTime = Random.Range(5, 10);
+                waitTime = Random.Range(15, 25);
             }
             else {
                 waitTime -= Time.deltaTime;
