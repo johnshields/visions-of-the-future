@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0.99999905, b: 0.99999905, a: 1}
+  m_IndirectSpecularColor: {r: 0.18386807, g: 0.22901505, b: 0.30311137, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1949,7 +1949,12 @@ MonoBehaviour:
   - {fileID: 6604042084170105150, guid: df762ed6bda4a8445a46dd8e560aba90, type: 3}
   - {fileID: 6723062667816286018, guid: 275dd72fee306fb49b7e08997c76e3e5, type: 3}
   - {fileID: 9171130694180933560, guid: af86fd9ccf0447d4bbb20b7011b32823, type: 3}
+  objectCounter: {fileID: 0}
   objectPos: 0
+  clip: {fileID: 0}
+  tv: {fileID: 0}
+  computer: {fileID: 0}
+  bar: {fileID: 0}
 --- !u!1 &595524503
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,7 +7175,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 720902797}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 37.2, y: 0, z: 0}
+  m_LocalPosition: {x: -68.5, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 963194228}
@@ -17488,6 +17493,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a019e2cba85ccd4b96734df2f15163a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  dialogueUI: {fileID: 0}
+  dialogueText: {fileID: 0}
   dialogueFt: Welcome home!
   voice: {fileID: 8300000, guid: fed6840dadba0c44e8a2af83ee2f0119, type: 3}
 --- !u!65 &919132149177257406

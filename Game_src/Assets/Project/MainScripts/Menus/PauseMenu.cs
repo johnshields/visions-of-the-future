@@ -25,12 +25,21 @@ namespace Main
         {
             // if esc pressed pause game else resume.
             if (!Input.GetKeyDown(KeyCode.Escape)) return;
-            if (_paused) ResumeGame();
-            else PauseGame();
+            if (_paused)
+            {
+                Cursor.lockState = CursorLockMode.Locked;
+                ResumeGame();
+            }
+            else
+            {
+                Cursor.lockState = CursorLockMode.None;
+                PauseGame();
+            }
         }
 
         private void PauseGame()
         {
+            Cursor.lockState = CursorLockMode.None;
             // Pause - volume & time.
             Time.timeScale = 0f;
             AudioListener.volume = 0f;
