@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_src/Assets/Project/MainCreate/Prefabs/Player.prefab.meta
 guid: dd6a4df998f94ff409c2dc270f6d2bdb
+========
+guid: d39ec8a81ba99884d81bc608d71899cd
+>>>>>>>> dce88fb52656cfcef3410f380cd400f1c56e48ce:Game_src/Assets/Project/MainCreate/Prefabs/Guides/80_Guide.prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

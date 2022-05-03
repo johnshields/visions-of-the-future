@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_src/Assets/Project/MainCreate/Prefabs/Guides/20_Guide.prefab.meta
 guid: 6e0706a7a1a4fed458bacca9f491fadd
+========
+guid: bc048db93d71d7c449d4bcc8cb969a55
+>>>>>>>> dce88fb52656cfcef3410f380cd400f1c56e48ce:Game_src/Assets/Project/MainCreate/Prefabs/Guides/1920_Dialogue .prefab.meta
 PrefabImporter:
   externalObjects: {}
   userData: 

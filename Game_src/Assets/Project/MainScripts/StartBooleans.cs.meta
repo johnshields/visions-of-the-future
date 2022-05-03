@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_src/Assets/Project/NavigationHub/Scripts/FootstepAudio.cs.meta
+guid: 627161bd5d58ec14c874decd04c2f331
+========
 guid: 5b19120d880c27d4495fae880333547a
+>>>>>>>> dce88fb52656cfcef3410f380cd400f1c56e48ce:Game_src/Assets/Project/MainScripts/StartBooleans.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
