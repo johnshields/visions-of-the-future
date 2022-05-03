@@ -31,31 +31,35 @@ public class Shop : MonoBehaviour
         buildManager.SelectBuildingToBuild(leisureBuilding); // ditto as command in SelectStandardBuilding
     }
 
-    public void SelectGardenBuilding()
+    public void SelectGardenBuilding() // ditto as above
     {
         Debug.Log("garden building selected");
         buildManager.SelectBuildingToBuild(gardenBuilding);
     }
 
-    public void SelectLeisureBuilding()
+    public void SelectLeisureBuilding() // ditto as above
+    {
     {
         Debug.Log("leisure building selected");
         buildManager.SelectBuildingToBuild(highRiseBuilding);
     }
 
-    public void SelectSteppedBuilding()
+    public void SelectSteppedBuilding() // ditto as above
+    {
     {
         Debug.Log("stepped building selected");
         buildManager.SelectBuildingToBuild(steppedBuilding);
     }
 
-    public void SelectApartmentBuilding()
+    public void SelectApartmentBuilding() // ditto as above
+    {
     {
         Debug.Log("apartment building selected");
         buildManager.SelectBuildingToBuild(apartmentBuilding);
     }
 
-    public void SelectAnotherApartmentBuilding()
+    public void SelectAnotherApartmentBuilding() // ditto as above
+    {
     {
         Debug.Log("another apartment building selected");
         buildManager.SelectBuildingToBuild(flatBuilding);

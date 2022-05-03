@@ -19,10 +19,10 @@ public class UIAudio : MonoBehaviour
 
     public void PlayUiSounds()
     {
-        source.clip = uiSounds[Random.Range(0, uiSounds.Length)];
-        source.pitch = Random.Range(1- pitchChange, 1+ pitchChange);
+        source.clip = uiSounds[Random.Range(0, uiSounds.Length)]; // the clip in the audio source is a randomly assigned one fron uiSounds array
+        source.pitch = Random.Range(1- pitchChange, 1+ pitchChange); // randomises the pitch, plus and minus the pitchchange value
 
-        source.PlayOneShot(source.clip);
+        source.PlayOneShot(source.clip); // plays the audioclip assigend to the audiosource
     }
 
     

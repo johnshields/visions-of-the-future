@@ -8,7 +8,7 @@ public class GeneralUI : MonoBehaviour
      
 
     
-    public GameObject shopUI;
+    public GameObject shopUI; // creates a game object that can be assigned in the inspector
     public GameObject transportZoneHintUI;
     public GameObject cultureZoneHintUI;
     public GameObject residentialZoneHintUI;
@@ -17,44 +17,44 @@ public class GeneralUI : MonoBehaviour
 
     public void Start()
     {
-        StartCoroutine(OpeningUIActive());
+        StartCoroutine(OpeningUIActive()); // starts the OpeningUIActive coroutine
     }
 
     public void LoadIntroScene()
     {
-        SceneManager.LoadScene("03_TwentiesOpeningScene", LoadSceneMode.Single);
+        SceneManager.LoadScene("03_TwentiesOpeningScene", LoadSceneMode.Single); // loads 03_TwentiesOpeningScene
     }
 
     public void LoadNavHub()
     {
-        SceneManager.LoadScene("02_NavHub", LoadSceneMode.Single);
+        SceneManager.LoadScene("02_NavHub", LoadSceneMode.Single); // loads 02_NavHub
     }
 
     public void HideTransportHint()
     {
-        transportZoneHintUI.SetActive(false);
-        shopUI.SetActive(true);                
+        transportZoneHintUI.SetActive(false); // sets transportZoneHintUI to inactive
+        shopUI.SetActive(true);  // sets shopUI to active
     }
 
-    public void HideCultureHint()
+    public void HideCultureHint() // same as above
     {
         cultureZoneHintUI.SetActive(false);
         shopUI.SetActive(true);
     }
 
-    public void HideSteppedHint()
+    public void HideSteppedHint() // same as above
     {
         steppedZoneHintUI.SetActive(false);
         shopUI.SetActive(true);
     }
 
-    public void HideResidentialHint()
+    public void HideResidentialHint() // same as above
     {
         residentialZoneHintUI.SetActive(false);
         shopUI.SetActive(true);
     }    
 
-    public void HideOpeningUI()
+    public void HideOpeningUI() // same as above
     {
         openingUI.SetActive(false);
         shopUI.SetActive(true);
@@ -62,7 +62,7 @@ public class GeneralUI : MonoBehaviour
 
     public IEnumerator OpeningUIActive()
     {
-        yield return new WaitForSecondsRealtime(2f);
-        openingUI.SetActive(true);
+        yield return new WaitForSecondsRealtime(2f); // waits for 2 seconds to execute below command
+        openingUI.SetActive(true); // sets openingUI to active
     }
 }

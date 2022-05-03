@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class CityIntensityAudioManager : MonoBehaviour
 {
+    // singleton Pattern
 
     public static CityIntensityAudioManager instance;
 
@@ -17,7 +18,7 @@ public class CityIntensityAudioManager : MonoBehaviour
     ScoreManager scoreManager;
     
 
-    public GameObject intensityLayer1;
+    public GameObject intensityLayer1; // creates a gameobject that can be assigned in the inspector
     public GameObject intensityLayer2;
     public GameObject intensityLayer3;
 
@@ -36,26 +37,26 @@ public class CityIntensityAudioManager : MonoBehaviour
     {
         scoreManager = ScoreManager.instance;
 
-        intensityAudio1 = intensityLayer1.GetComponent<AudioSource>();
+        intensityAudio1 = intensityLayer1.GetComponent<AudioSource>(); // gets the audiosource component of the gameobject assigned in the inspector
         intensityAudio2 = intensityLayer2.GetComponent<AudioSource>();
         intensityAudio3 = intensityLayer3.GetComponent<AudioSource>();
 
-        layer1 = null;
+        layer1 = null; // sets layer1 to null
         layer2 = null;
         layer3 = null;
     }
 
-    public void CityIntensityIncreaser()
+    public void CityIntensityIncreaser() // increases the intensity of the ambient audio layers
     {
-        if (scoreManager.scoreAmount < 5)
+        if (scoreManager.scoreAmount < 5) // if the score amount is below 5
         {
-            return;
+            return; // do nothing
         }
 
-        else if (scoreManager.scoreAmount >= 5 && scoreManager.scoreAmount < 20 && layer1 == null)
+        else if (scoreManager.scoreAmount >= 5 && scoreManager.scoreAmount < 20 && layer1 == null) // if the score amount is greater than 5, less than 20 and layer1 is equal to null
         {            
-            intensityAudio1.Play();
-            layer1 = intensityAudio1;         
+            intensityAudio1.Play(); // play intensityaudio1
+            layer1 = intensityAudio1; // by setting layer 1 to intensityAudio1 then intesnityAudio1 will not get played again as it is already active
             
         }
 
@@ -72,7 +73,7 @@ public class CityIntensityAudioManager : MonoBehaviour
         }
     }
 
-    public void CityIntensityDecreaser()
+    public void CityIntensityDecreaser() // decreases the intensity of the ambient audio layers, same as above but in reverse
     {
         if (scoreManager.scoreAmount < 5)
         {

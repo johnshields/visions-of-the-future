@@ -94,8 +94,8 @@ public class Node : MonoBehaviour
 
         StartCoroutine(AddScoreChecker()); // calls the AddScoreChecker method
 
-        cityAudioManager.BuildSoundPlay();
-        intensityAudioManager.CityIntensityIncreaser();
+        cityAudioManager.BuildSoundPlay(); // calls BuildSoundsPlay() in the cityAudioManager class
+        intensityAudioManager.CityIntensityIncreaser(); // calsl the CityIntensityIncreaser in the intensityAudioManager class
           
     }
     
@@ -151,17 +151,14 @@ public class Node : MonoBehaviour
         {
             scoreManager.AddScore(); // calls the AddScore method in ScoreManager script
         }        
-        else if(hintUICounter < 2)        
-        {
-            Debug.Log("NoPoints");
-            hintUI.SetActive(true);
-            shopUI.SetActive(false);
-            hintUICounter ++;
-            
-            
+        else if(hintUICounter < 2) // if hintUIcounter is below 0    
+        {            
+            hintUI.SetActive(true); // sets hintUI to active
+            shopUI.SetActive(false); // sets shop UI to false
+            hintUICounter ++; // adds a point to the hintUICounter - this means the hintUI only appears twice. I thought it would get annoying if the hintUI appeared everytime   
         }
 
-        else if (hintUICounter >= 2)
+        else if (hintUICounter >= 2) // if hintUICounter is above or equal to 2
         {
             Debug.Log("you're an idiot");
         }
@@ -176,7 +173,6 @@ public class Node : MonoBehaviour
         
         else        
         {
-            Debug.Log("NoPointsMinus");
             return;
         }
     }
