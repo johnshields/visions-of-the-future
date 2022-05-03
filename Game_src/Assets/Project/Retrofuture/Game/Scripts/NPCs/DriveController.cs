@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * DriveController
+ * Script to play Driving Animation.
+ */
 public class DriveController : MonoBehaviour
 {
     private int _driveActive;

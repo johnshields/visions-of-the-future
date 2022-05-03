@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_src/Assets/Project/1980s.meta
 guid: 50118dd258fc5614fbe6423f65545939
+========
+guid: 6dd53335fb061f14c84155dc4f9af4d1
+>>>>>>>> dce88fb52656cfcef3410f380cd400f1c56e48ce:Game_src/Assets/Project/MainCreate/Prefabs.meta
 folderAsset: yes
 DefaultImporter:
   externalObjects: {}

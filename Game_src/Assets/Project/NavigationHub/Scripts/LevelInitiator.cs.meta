@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<<< HEAD:Game_src/Assets/Project/NavigationHub/Scripts/LevelInitiator.cs.meta
 guid: ca7b40bfbb2352e4daba6c4a5ee8457b
+========
+guid: 627161bd5d58ec14c874decd04c2f331
+>>>>>>>> dce88fb52656cfcef3410f380cd400f1c56e48ce:Game_src/Assets/Project/NavigationHub/Scripts/FootstepAudio.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2

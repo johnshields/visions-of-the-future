@@ -2,6 +2,11 @@ using System.Collections;
 using Guide;
 using UnityEngine;
 
+/*
+ * DrivingSettings
+ * Script to Manage DrivingSettings - CinematicMode, Replace Player & Guide with Dummies, Respawn Guide at
+ * Driving Destination.
+ */
 public class DrivingSettings : MonoBehaviour
 {
     public GameObject guide, dummyGuide, player, dummy, gd;
@@ -54,6 +59,7 @@ public class DrivingSettings : MonoBehaviour
         gd.GetComponent<GuideDialogue>().WelcomeHome();
     }
 
+    // Activate/Deactivate CinemaMode based on params.
     private void CinemaMode(bool fadeIn, bool fadeOut)
     {
         cinematicBorders[0].GetComponent<Animator>().SetBool("FadeIn", fadeIn);

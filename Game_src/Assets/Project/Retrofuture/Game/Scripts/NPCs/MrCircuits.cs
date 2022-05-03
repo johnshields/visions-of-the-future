@@ -1,6 +1,10 @@
 using System.Collections;
 using UnityEngine;
 
+/*
+ * MrCircuits
+ * Script to control MrCircuits (Robot Butler) Interactions (Animation & Dialogue)
+ */
 public class MrCircuits : MonoBehaviour
 {
     private int _waveActive, _idleActive;
@@ -25,17 +29,20 @@ public class MrCircuits : MonoBehaviour
     {
         if (!_complete)
         {
-            // dialogue
+            // Activate dialogue & animation.
             dialogueUI.SetActive(true);
+            // Call DialogueTyper to type out what MrCircuits says.
             StartCoroutine(DialogueTyper.TypeDialogue(Ct, dialogueFt, dialogueText));
+            // MrCircuits voice audio.
             AudioSource.PlayClipAtPoint(voice, Camera.main!.transform.position, 0.2f);
-            // animation
+            // Trigger animation.
             _animator.SetTrigger(_waveActive);
             StartCoroutine(BackToIdle());
         }
         else print("Encounter completed...");
     }
 
+    // Set MrCircuits back to Idle.
     private IEnumerator BackToIdle()
     {
         _complete = true;

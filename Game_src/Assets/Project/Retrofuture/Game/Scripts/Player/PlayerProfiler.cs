@@ -1,6 +1,10 @@
 using UnityEngine;
 
-namespace Project.Retrofuture.Game.Scripts
+/*
+ * PlayerProfiler
+ * Script to control movement and animations of player.
+ */
+namespace Player
 {
     public class PlayerProfiler : MonoBehaviour
     {
@@ -60,7 +64,7 @@ namespace Project.Retrofuture.Game.Scripts
  
         private void JumpActive()
         {
-            // Jump.
+            // Jump and Animate only if grounded.
             var grounded = Physics.CheckSphere(groundCheck.position, 0.2f, groundLayer);
             _direction.y += gravity * Time.deltaTime;
             _animator.SetBool(_grounded, grounded);

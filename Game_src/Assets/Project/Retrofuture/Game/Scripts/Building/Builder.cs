@@ -1,8 +1,11 @@
 using System.Collections;
-using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * Builder
+ * Script to control the Builder Inventory - switches _selectedObjects.
+ */
 namespace Building
 {
     public class Builder : MonoBehaviour
@@ -14,6 +17,7 @@ namespace Building
         public static int objectsPlaced;
         public AudioClip clip, tv, computer, bar;
 
+        // For switching _selectedObject depending on the num.
         public void Selector(int num)
         {
             // Inventory selector.
@@ -69,13 +73,16 @@ namespace Building
             {
                 var mousePos = Input.mousePosition;
                 mousePos.z = objectPos;
+                // Place Object at Mouse position in Camera view.
                 var worldPos = Camera.main!.ScreenToWorldPoint(mousePos);
                 Instantiate(buildingObject[_selectedObject], worldPos, Quaternion.identity);
+                // update object number and play sound.
                 objectsPlaced++;
                 StartCoroutine(PlayClip());
             }
         }
         
+        // Update GUI objectCounter to let player know how many objects are in scene.
         private void OnGUI()
         {
             var objectsUI = objectCounter.GetComponent<Text>();
@@ -85,6 +92,7 @@ namespace Building
                 objectsUI.text = objectsPlaced.ToString();;
         }
 
+        // IEnumerator to play sound clip according to the _selectedObject.
         private IEnumerator PlayClip()
         {
             yield return new WaitForSeconds(0.5f);

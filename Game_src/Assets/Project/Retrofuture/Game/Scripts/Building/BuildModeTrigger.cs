@@ -1,7 +1,10 @@
 using Pathfinding;
 using UnityEngine;
-using Guide;
 
+/*
+ * BuildModeTrigger
+ * Script to activate BuildMode.
+ */
 namespace Building
 {
     public class BuildModeTrigger : MonoBehaviour
@@ -10,13 +13,15 @@ namespace Building
         private bool _entered;
         public GameObject guide;
         public static bool build;
-
+        
         private void OnTriggerEnter(Collider other)
         {
+            // Only allow player to interact.
             if (other.gameObject.CompareTag("Player"))
             {
                 if (!_entered)
                 {
+                    // Enable BuildMode and disable Guide.
                     print("Build mode on.");
                     buildingObjects[0].SetActive(true);
                     buildingObjects[1].SetActive(true);
@@ -36,6 +41,7 @@ namespace Building
             }
         }
 
+        // For Disabling Guide during BuildMode (Avoids guide from being in the way).
         private void DisableGuide(bool active)
         {
             guide.GetComponent<AIPath>().enabled = active;

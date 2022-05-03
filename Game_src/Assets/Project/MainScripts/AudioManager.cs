@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * AudioManager
+ * To control Audio throughout all scenes depending on the Audio Options from the MainMenu.
+ */
 namespace Main
 {
     public class AudioManager : MonoBehaviour

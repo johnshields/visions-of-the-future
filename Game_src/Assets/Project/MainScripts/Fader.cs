@@ -1,5 +1,9 @@
 using UnityEngine;
 
+/*
+ * Fader
+ * Script for control the black FadeIn/FadeOut used throughout the scenes.
+ */
 public class Fader : MonoBehaviour
 {
     private static int _fadeIn, _fadeOut;

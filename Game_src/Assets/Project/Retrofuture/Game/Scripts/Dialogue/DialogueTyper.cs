@@ -2,6 +2,11 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
+/*
+ * TypeWriter
+ * Script for Dialogue UIs to give the impression of 'talking' for Guides and Robot Butler.
+ * Adapted from https://youtu.be/1qbjmb_1hV4
+ */
 public static class DialogueTyper
 {
     public static IEnumerator TypeDialogue(string ct, string ft, GameObject dt)

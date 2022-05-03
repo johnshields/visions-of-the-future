@@ -1,8 +1,12 @@
 using System.Collections;
 using Pathfinding;
-using Project.Retrofuture.Game.Scripts;
+using Player;
 using UnityEngine;
 
+/*
+ * RfManager
+ * Script to Camera Zoom and Enable Guide after FadeIn.
+ */
 public class RfManager : MonoBehaviour
 {
     private GameObject _guide, _camera, _player;
